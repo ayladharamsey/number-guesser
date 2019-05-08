@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<title>Number Guesser</title>
+</head>
+<body>
+	<header>
+		<h1><span class="h1-bold">NUMBER</span> GUESSER</h1>
+		<h3>Ultimate Challenger Edition</h3>
+	</header>
+	<main>
+		<div class="leftpane">
+			<form action="unknown.com" method="get">
+				<h4>Set Range</h4>
+				<label>Min Range</label>
+				<input type="text" name="min-range">
+				<label>Max Range</label>
+				<input type="text" name="max-range">
+				<button class="pill active">UPDATE</button>
+			</form>
+			<form>
+				<p>The Current Range is <span class="bold"> 1 </span> to <span class="bold">100</span></p>
+				<h4>Challenger 1</h4>
+				<label>Name</label>
+				<input type="text" name="challenger-1-name">
+				<label>Guess</label> 
+				<input type="text" name="challenger-1-guess">
+				<h4>Challenger 2</h4>
+				<label>Name</label>
+				<input type="text" name="challenger-2-name">
+				<label>Guess</label>
+				<input type="text" name="challenger-2-guess">
+				<button class="pill active">SUBMIT GUESS</button>
+				<button class="pill inactive">RESET GUESS</button>
+				<button class="pill inactive">CLEAR GAME</button>
+			</form>
+			<section>
+				<h4>Latest Score</h4>
+				<div class="score-challenger-1">
+					<p>
+						<span class="bold">Challenger 1 Name</span> current guess
+					</p>
+					<h1> <span class="h1-bold">97</span>
+					</h1>
+					<p>that's too high</p>
+				</div>
+				<div class="score-challenger-2">
+					<p>
+						<span class="bold">Challenger 2 Name</span> current guess
+					</p>
+					<h1>
+						<span class="h1-bold">3</span>
+					</h1>
+					<p> that's too low</p>
+				</div>
+			</section>
+			<aside class="cards">
+				<ul>
+					<li>
+						<p>
+							<span class="bold">CHALLENGER 1 NAME</span>
+							VS
+							<span class="bold">CHALLENGER 2 NAME</span>
+						</p>
+						<hr>
+						<h2>
+							<span class="h2-bold">CHALLENGER 2 NAME</span>
+							WINNER
+						</h2>
+						<hr>
+						<p>
+							<span class="bold">47</span>
+							GUESSES
+						</p>
+						<p>
+							<span class="bold">1.35</span>
+							MINUTES
+						</p>
+						<button class="round">
+							<a href="">x</a>
+						</button>	 
+					</li>
+					<li>
+						<p>
+							<span class="bold">CHALLENGER 1 NAME</span>
+							VS
+							<span class="bold">CHALLENGER 2 NAME</span>
+						</p>
+						<hr>
+						<h2>
+							<span class="h2-bold">CHALLENGER 1 NAME</span>
+							WINNER
+						</h2>
+						<hr>
+						<p>
+							<span class="bold">23</span>
+							GUESSES
+						</p>
+						<p>
+							<span class="bold">.5</span>
+							MINUTES
+						</p>
+						<button class="round">
+							<a href="">x</a>
+						</button>	 
+					</li>
+					<li>
+						<p>
+							<span class="bold">CHALLENGER 1 NAME</span>
+							VS
+							<span class="bold">CHALLENGER 2 NAME</span>
+						</p>
+						<hr>
+						<h2>
+							<span class="h2-bold">CHALLENGER 1 NAME</span>
+							WINNER
+						</h2>
+						<hr>
+						<p>
+							<span class="bold">1675</span>
+							GUESSES
+						</p>
+						<p>
+							<span class="bold">3.5</span>
+							MINUTES
+						</p>
+						<button class="round">
+							<a href="">x</a>
+						</button>	 
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</main>
+</body>
+</html>
