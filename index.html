@@ -7,17 +7,21 @@
 </head>
 <body>
 	<header>
-		<h1><span class="h1-bold">NUMBER</span> GUESSER</h1>
+		<h1><span class="h1-bold">NUMBER</span>GUESSER</h1>
 		<h3>Ultimate Challenger Edition</h3>
 	</header>
 	<main>
 		<div class="leftpane">
 			<form action="unknown.com" method="get">
 				<h4>Set Range</h4>
-				<label>Min Range</label>
-				<input type="text" name="min-range">
-				<label>Max Range</label>
-				<input type="text" name="max-range">
+				<div class="min-container">
+					<label>Min Range</label>
+					<input type="text" name="min-range">
+				</div>
+				<div class="max-range-container">
+					<label>Max Range</label>
+					<input type="text" name="max-range">
+				</div>	
 				<button class="pill active">UPDATE</button>
 			</form>
 			<form>
@@ -70,11 +74,11 @@
 							WINNER
 						</h2>
 						<hr>
-						<p>
+						<p class="bottom">
 							<span class="bold">47</span>
 							GUESSES
 						</p>
-						<p>
+						<p class="bottom">
 							<span class="bold">1.35</span>
 							MINUTES
 						</p>
@@ -83,7 +87,7 @@
 						</button>	 
 					</li>
 					<li>
-						<p>
+						<p class="">
 							<span class="bold">CHALLENGER 1 NAME</span>
 							VS
 							<span class="bold">CHALLENGER 2 NAME</span>
@@ -94,11 +98,11 @@
 							WINNER
 						</h2>
 						<hr>
-						<p>
+						<p class="bottom">
 							<span class="bold">23</span>
 							GUESSES
 						</p>
-						<p>
+						<p class="bottom">
 							<span class="bold">.5</span>
 							MINUTES
 						</p>
@@ -118,11 +122,11 @@
 							WINNER
 						</h2>
 						<hr>
-						<p>
+						<p class="bottom">
 							<span class="bold">1675</span>
 							GUESSES
 						</p>
-						<p>
+						<p class="bottom">
 							<span class="bold">3.5</span>
 							MINUTES
 						</p>

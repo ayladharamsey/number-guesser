@@ -3,6 +3,7 @@ h1{
 	font-weight: 300;
 	color: #DD1972;
 	text-align: center;
+	padding-top: 20px;
 }
 .h1-bold{
 	font-weight: 700;
@@ -11,6 +12,14 @@ h1{
 header{
 	background-color: #404041;
 	}
+main{
+	background-color: #F7F7F7;
+	width: 50%;
+}
+aside{
+	background-color: #D0D2D3;
+	padding: 20px;
+}
 form{
 	border-style: solid;
 	border-width: 2px;
@@ -30,6 +39,7 @@ h3{
 	font-family: open sans;
 	font-weight: 300;
 	color: #FFFFFF;
+	padding-bottom: 20px;
 }
 h2{
 	text-align: center;
@@ -46,6 +56,24 @@ p, label{
 	font-weight: 300;
 	color: #404041;
 }
+
+label{
+	display: block;
+}
+input{
+	border-style: none;
+	height: 40px;
+}
+}
+.min-range .max-range{
+	width:300px;
+}
+.min-range-container {
+	display: inline;
+}
+.max-range-container{
+	display: inline;
+}
 .bold{
 	font-weight: 700;
 }
@@ -56,6 +84,7 @@ p, label{
 	padding: 4px 8px 4px 8px;
 	font-weight: 700;
 	font-size: 10px;
+	display: inline-block;
 }
 .active{
 	background-color:#6E6E6E; 
@@ -65,20 +94,48 @@ p, label{
 	background-color:#D0D2D3;
 	color:#FFFFFF;
 }
+ul{
+	margin:0px;
+	padding: 0px;
+}
 li{
 	list-style: none;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #D0D2D3;
+	border-color: #6e6e6e;
+	background-color:#F7F7F7;
 	padding: 10px;
-	margin: 10px;
+	margin-bottom: 10px;
+}
+li p{
+	text-align: center;
+}
+.score-challenger-1 p{
+ 	text-align: center;
+}
+.score-challenger-2 p{
+ 	text-align: center;
+}
+.bottom{
+	text-align:left;
+	display: inline;
+	margin-right: 60px
 }
 .round{
 	border-radius: 50%;
-	width: 7px;
-	height: auto;
 	text-align: center;
+	background-color: #404041;
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+a{
+	color:#FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	padding-bottom: 3px;
 }
 * {
-	border-sizing: border-box; 
+	box-sizing: border-box; 
 	}
