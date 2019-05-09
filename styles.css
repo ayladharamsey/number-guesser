@@ -58,34 +58,25 @@ h3:after {
  margin-right: -50%;
 }
 
-/*.header-style-left {*/
-	/*border-bottom: 2px solid #FFFFFF;
-	margin: 0 220px;*/
-	/*color: #FFFFFF;
-	height: 2px;
-	z-index: 5;
-	display: inline-block;
-	position: absolute;
-	margin-top: -20px;*/
-}	
-
-/*.header-style-right {
-	border-bottom: 2px solid #FFFFFF;
-	margin-right: 25px;*/
-}
-
-main { /*tyring out flex*/
+.container { /*tyring out flex*/
 	display: flex;
 	/*flex-direction: column;*/
     /*flex-wrap: wrap;*/
     align-content: center;
+    background-color: #F7F7F7;
+	width: 50%;
 }
 
 .leftpane { /*tyring out flex*/
 	flex: 50%;
 }
 
-form {
+aside{
+	background-color: #D0D2D3;
+	padding: 20px;
+}
+
+form{
 	border-style: solid;
 	border-width: 2px;
 	border-color: #D0D2D3;
@@ -107,20 +98,33 @@ aside { /*trying to figure out FLEX*/
 	/*flex-direction: column;*/
 
 }
+
 h3 {
 	text-align: center;
 	font-family: open sans;
 	font-weight: 300;
 	color: #FFFFFF;
+	padding-bottom: 20px;
 }
 
 h2 {
 	text-align: center;
 	font-family: open sans;
 	font-weight: 300;
-} 
+}
 
-p, label {
+.h2-bold{
+	display: block;
+	font-weight: 700;
+}
+h4{
+	font-family: open sans;
+    font-weight: 700;
+    color: #404041;
+    margin: 3px 0 5px 0;
+}
+
+p, label{
 	font-family: open sans;
 	font-weight: 300;
 	color: #404041;
@@ -130,15 +134,59 @@ p, label {
 	font-weight: 700;
 }
 
-.pill {
-	width: 100px;
+
+label{
+	display: block;
+}
+input{
+	border-style: solid;
+	border-color: #D0D2D3;
+	height: 35px;
+}
+
+.min-range .max-range{
+	width:300px;
+}
+
+.min-container {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.max-container{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.challenger-1-name{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.challenger-1-guess{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.pill{
+	width: 150px;
+	height: 30px;
 	border-radius: 500px;
 	border-style: none;
 	padding: 4px 8px 4px 8px;
 	font-weight: 700;
-	font-size: 10px;
+	font-size: 15px;
+	display: inline-block;
 }
-/*ADDED HOVER COLOR TO ALL BUTTONS*/
+
+#update{
+	width: 100px;
+}
+
 .pill:hover, .active:hover, .inactive.hover {
 	background-color: #dd1972;
 	color: #FFFFFF;
@@ -154,20 +202,49 @@ p, label {
 	color:#FFFFFF;
 }
 
-li {
+ul{
+	margin:0px;
+	padding: 0px;
+}
+
+li{
 	list-style: none;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #D0D2D3;
+	border-color: #6e6e6e;
+	background-color:#F7F7F7;
 	padding: 10px;
 	margin: 10px;
 } 
 
-.round {
-	border-radius: 50%;
-	width: 7px;
-	height: auto;
+li p{
 	text-align: center;
+}
+.score-challenger-1 p{
+ 	text-align: center;
+}
+.score-challenger-2 p{
+ 	text-align: center;
+}
+.bottom{
+	text-align:left;
+	display: inline;
+	margin-right: 60px
+}
+.round{
+	border-radius: 50%;
+	text-align: center;
+	background-color: #404041;
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+a{
+	color:#FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	padding-bottom: 3px;
 }
 
 @media (min-width: 320px) {
