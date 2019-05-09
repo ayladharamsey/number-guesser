@@ -64,7 +64,7 @@ h3:after {
     /*flex-wrap: wrap;*/
     align-content: center;
     background-color: #F7F7F7;
-	width: 50%;
+	
 }
 
 .leftpane { /*tyring out flex*/
@@ -74,6 +74,8 @@ h3:after {
 aside{
 	background-color: #D0D2D3;
 	padding: 20px;
+	display: flex;
+	flex: 50%;	
 }
 
 form{
@@ -92,12 +94,6 @@ section {
 	padding: 10px;
 }
 
-aside { /*trying to figure out FLEX*/
-	display: flex;
-	flex: 50%;		
-	/*flex-direction: column;*/
-
-}
 
 h3 {
 	text-align: center;
