@@ -35,16 +35,17 @@ function changeRange(e) {
 };
 
 function checkInputFields(e) {
-	if (challengerName1.value != "" && challengerName2.value != "" && challenger1Guess.value != "" && challenger2Guess.value != "") {
+	if (challengerName1.value !== "" && challengerName2.value !== "" && challenger1Guess.value !== "" && challenger2Guess.value !== "") {
 		console.log(e);
 		submitGuessBtn.disabled = false;
-		resetGameBtn.disabled = false;
 		clearGuessBtn.disabled = false;
-	} 
-	if (challengerName1.value == "" && challengerName2.value == "" && challenger1Guess.value == "" && challenger2Guess.value == "") {
+	} else if (challengerName1.value !== "" || challengerName2.value !== "" || challenger1Guess.value !== "" || challenger2Guess.value !== "") {
+		console.log('clear');
+		submitGuessBtn.disabled = true;
+		clearGameBtn.disabled = false;
+	} else {
 		console.log(e);
 		submitGuessBtn.disabled = true;
-		resetGameBtn.disabled = true;
 		clearGuessBtn.disabled = true;
 	};
 };
