@@ -13,3 +13,5 @@ updateBtn.addEventListener("click", updateRange(){
 	maxValue.innerText = maxRange();
 });
 
+
+

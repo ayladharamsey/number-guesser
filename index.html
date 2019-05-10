@@ -3,7 +3,6 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<script type="text/javascript" src="main.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Media query -->
 	<title>NUMBER GUESSER</title>
 </head>
@@ -13,7 +12,7 @@
 		<H3>ULITMATE CHALLENGER EDITION</h3></div>
 	</header>
 	<main class="container">
-		<div class="leftpane"> <!-- MOVED DIV AROUND TO ONLY BE ON LEFT -->
+		<div class="leftpane"> 
 			<form action="unknown.com" method="get">
 				<h4>Set Range</h4>
 				<div class="min-container">
@@ -30,52 +29,44 @@
 				<p>The Current Range is <span class="bold" id="min-value"> 1 </span> to <span class="bold" id="max-value">100</span></p>
 				<h4>Challenger 1</h4>
 					<div class="challenger1-container">
-						<div class="challenger-1-container-name">
-							<label>Name</label>
-							<input type="text" name="challenger-1-name">
-						</div>
-						<div class="challenger-1-container-guess">
-							<label>Guess</label> 
-							<input type="text" name="challenger-1-guess">	
-						</div>
+						<label class="update-challenger1-name">Name</label>
+						<input type="text" name="challenger1-name" class="challenger1-name">
+						<label class="update-challenger1-guess">Guess</label> 
+						<input type="text" class="challenger1-guess">	
 					</div>
 				<h4>Challenger 2</h4>
 					<div class="challenger2-container">
-						<div class="challenger-2-container-name">
-							<label>Name</label>
-							<input type="text" name="challenger-2-name">
-						</div>
-						<div class="challenger-2-container-guess">
-							<label>Guess</label>
-							<input type="text" name="challenger-2-guess">
-						</div>	
+						<label class="update-challenger2-name">Name</label>
+						<input type="text" name="challenger2-name" class="challenger2-name">
+						<label class="update-challenger2-guess">Guess</label>
+						<input type="text" name="challenger2-guess" class="challenger2-guess">	
 					</div>
-				<button class="pill active">SUBMIT GUESS</button>
+				<button class="pill active" id="submit-guess">SUBMIT GUESS</button>
 				<button class="pill inactive">RESET GUESS</button>
-				<button class="pill inactive">CLEAR GAME</button>
+				<button class="pill inactive" id="clear-game">CLEAR GAME</button>
 			</form>
 			<section>
 				<h4>Latest Score</h4>
 				<div class="score-challenger-1">
 					<p>
-						<span class="bold">Challenger 1 Name</span> current guess
+						<span id="update-challenger1-name" class="bold">Challenger 1 Name</span> current guess
 					</p>
-					<h1> <span class="h1-bold">97</span>
+					<h1> <span id="update-challenger1-guess" class="h1-bold">97</span>
 					</h1>
 					<p>that's too high</p>
 				</div>
 				<div class="score-challenger-2">
 					<p>
-						<span class="bold">Challenger 2 Name</span> current guess
+						<span id="update-challenger2-name" class="bold">Challenger 2 Name</span> current guess
 					</p>
 					<h1>
-						<span class="h1-bold">3</span>
+						<span id="update-challenger2-guess" class="h1-bold">3</span>
 					</h1>
 					<p> that's too low</p>
 				</div>	
 			</section>
 		</div>	<!-- test for leftplane and flexbox -->
-		<div class="rightpane">
+		<div class="rightpane"> <!-- ADD CLASS AND FLEX -->
 			<aside class="cards">
 				<ul>
 					<li>
@@ -154,5 +145,6 @@
 			</aside> 
 		</div> <!-- END OF rightpane -->
 	</main>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
