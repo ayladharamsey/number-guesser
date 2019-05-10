@@ -1,5 +1,5 @@
 * {
-	border-sizing: border-box; 
+	box-sizing: border-box; 
 }
 
 body { /*ADDED BODY TO CSS*/
@@ -195,7 +195,7 @@ input{
 	width: 100px;
 }
 
-.pill:hover, .active:hover, .inactive.hover {
+.pill:hover, .active:hover, /*.inactive.hover */{
 	background-color: #dd1972;
 	color: #FFFFFF;
 }
