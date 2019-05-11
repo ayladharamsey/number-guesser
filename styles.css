@@ -69,15 +69,18 @@ h3:after {
 .leftpane { /*tyring out flex*/
 	flex: 50%;
 }
+.buttons{
+	margin-top: 20px;
+}
 
 aside{
 	background-color: #D0D2D3;
-	padding: 20px;
-	display: flex;
+	padding: 30px;
 	flex: 50%;	
 }
 .cards{
 	width: 50%;
+
 }
 form{
 	border-style: solid;
@@ -118,6 +121,7 @@ h4{
     font-weight: 700;
     color: #404041;
     margin: 3px 0 5px 0;
+    font-size: 18px;
 }
 
 p, label{
@@ -138,10 +142,8 @@ input{
 	border-style: solid;
 	border-color: #D0D2D3;
 	height: 35px;
-}
-
-.min-range .max-range{
-	width:300px;
+	width: 170px;
+	margin-top: 10px;
 }
 
 .min-container {
@@ -160,12 +162,14 @@ input{
 }
 .challenger-1-container-name{
 	display:inline-block;
+	margin: 20px;
 }
 .challenger-1-container-guess{
 	display:inline-block;
 }
 .challenger-2-container-name{
 	display:inline-block;
+	margin: 20px;
 }
 .challenger-2-container-guess{
 	display:inline-block;
@@ -174,7 +178,12 @@ input{
 	display: inline-block;
 	margin-right: 20px;
 }
-
+#challenger-1-name{
+	width: 300px;
+}
+#challenger-2-name{
+	width: 300px;
+}
 .bold{
 	font-weight: 700;
 }
@@ -230,6 +239,14 @@ li p{
 }
 .score-challenger-1 p{
  	text-align: center;
+}
+.score-challenger-1{
+	display: inline-block;
+	position: relative;
+}
+.score-challenger-2{
+	display: inline-block;
+	position: relative;
 }
 .score-challenger-2 p{
  	text-align: center;

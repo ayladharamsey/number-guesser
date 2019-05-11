@@ -11,6 +11,18 @@ var challengerName1 = document.getElementById('challenger-1-name');
 var challengerName2 = document.getElementById('challenger-2-name');
 var challenger1Guess = document.getElementById('challenger-1-guess');
 var challenger2Guess = document.getElementById('challenger-2-guess');
+var scoreChallenger1 = document.getElementById('score-challenger-1');
+var latestChallenger1Name = document.getElementById('latest-challenger-1-name');
+var latestChallenger2Name = document.getElementById('latest-challenger-2-name');
+var challenger1GuessPink = document.getElementById('challenger-1-guess-pink');
+var challenger2GuessPink = document.getElementById('challenger-2-guess-pink');
+var status = document.querySelector('.status');
+var challenger1CardHead = document.querySelector('.challenger-1-card-head');
+var challenger2CardHead = document.querySelector('.challenger-2-card-head');
+var winner = document.querySelector('.winner');
+var cards = document.querySelector('.cards');
+var card1 = document.getElementById('card-1');
+var card2 = document.getElementById('card-2');
 
 
 setRange.addEventListener('submit', changeRange);
