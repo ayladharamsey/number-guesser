@@ -8,42 +8,51 @@
 </head>
 <body>
 	<header>
-		<div class="heading"><h1><span>NUMBER</span>GUESSER</h1>
-		<H3>ULITMATE CHALLENGER EDITION</h3></div>
+		<div class="heading">
+			<h1><span>NUMBER</span>GUESSER</h1>
+			<h3>ULITMATE CHALLENGER EDITION</h3>
+		</div>
 	</header>
 	<main class="container">
 		<div class="leftpane"> 
-			<form action="unknown.com" method="get">
+			<form class="set-range" id="set-range">
 				<h4>Set Range</h4>
 				<div class="min-container">
 					<label>Min Range</label>
-					<input type="text" name="min-range">
+					<input type="number" id="min-range">
 				</div>
 				<div class="max-container">
 					<label>Max Range</label>
-					<input type="text" name="max-range">
+					<input type="number" id="max-range">
 				</div>	
-				<button class="pill active" id="update">UPDATE</button>
+				<input type="submit" class="pill active" id="update" value="UPDATE"></input>
 			</form>
-			<form>
+			<form class="challenger-bidding">
 				<p>The Current Range is <span class="bold" id="min-value"> 1 </span> to <span class="bold" id="max-value">100</span></p>
 				<h4>Challenger 1</h4>
-					<div class="challenger1-container">
-						<label class="update-challenger1-name">Name</label>
-						<input type="text" name="challenger1-name" class="challenger1-name">
-						<label class="update-challenger1-guess">Guess</label> 
-						<input type="text" class="challenger1-guess">	
+						<div class="challenger-1-container-name">
+              <label class="update-challenger1-name">Name</label>
+							<input type="text" id="challenger-1-name">
+						</div>
+						<div class="challenger-1-container-guess">
+							<label class="update-challenger1-guess">Guess</label> 
+							<input type="text" id="challenger-1-guess">	
+						</div>
 					</div>
 				<h4>Challenger 2</h4>
 					<div class="challenger2-container">
-						<label class="update-challenger2-name">Name</label>
-						<input type="text" name="challenger2-name" class="challenger2-name">
-						<label class="update-challenger2-guess">Guess</label>
-						<input type="text" name="challenger2-guess" class="challenger2-guess">	
+						<div class="challenger-2-container-name">
+							<label class="update-challenger2-name">Name</label>
+							<input type="text" id="challenger-2-name">
+						</div>
+						<div class="challenger-2-container-guess">
+							<label class="update-challenger2-guess">Guess</label>
+							<input type="text" id="challenger-2-guess">
+						</div>	
 					</div>
-				<button class="pill active" id="submit-guess">SUBMIT GUESS</button>
-				<button class="pill inactive">RESET GUESS</button>
-				<button class="pill inactive" id="clear-game">CLEAR GAME</button>
+				<button type="button" class="pill active" id="submit-guess" disabled>SUBMIT GUESS</button>
+				<button type="button"class="pill inactive" id="reset-game" disabled>RESET GUESS</button>
+				<button type="button"class="pill inactive" id="clear-game" disabled>CLEAR GAME</button>
 			</form>
 			<section>
 				<h4>Latest Score</h4>
