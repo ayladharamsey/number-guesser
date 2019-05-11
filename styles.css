@@ -196,7 +196,8 @@ input{
 	width: 100px;
 }
 
-.pill:hover, .active:hover, /*.inactive.hover */{
+
+#update:hover, #submit-guess:hover, #reset-game:hover, #clear-game:hover {
 	background-color: #dd1972;
 	color: #FFFFFF;
 }
