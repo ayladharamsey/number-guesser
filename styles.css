@@ -66,17 +66,18 @@ h3:after {
     background-color: #F7F7F7;
 	
 }
-.leftpane { /*tyring out flex*/
-	flex: 50%;
+.leftpane {
+	width: 50%;
 }
 .buttons{
 	margin-top: 20px;
 }
 
-aside{
+aside {
 	background-color: #D0D2D3;
+	flex: 50%;
 	padding: 30px;
-	flex: 50%;	
+/*	width: 50%;*/
 }
 
 .cards{
@@ -88,6 +89,7 @@ form{
 	border-color: #D0D2D3;
 	margin: 10px;
 	padding: 10px;
+	font-size: 18px;
 }
 
 section {
@@ -129,11 +131,14 @@ p, label{
 	font-weight: 300;
 	color: #404041;
 }
+.min-range, .max-range{
+	width: 170px;
+	margin-top: 10px;
+}
 
 .bold { /*USING SPAN FOR ALL .BOLD AND .H1-BOLD*/
 	font-weight: 700;
 }
-
 
 label{
 	display: block;
@@ -160,14 +165,14 @@ input{
 	display: inline-block;
 	margin-right: 20px;
 }
-.challenger-1-container-name{
+.challenger-1-container-name, .challenger-2-container-name{
 	display:inline-block;
 	margin: 20px;
 }
 .challenger-1-container-guess{
 	display:inline-block;
 }
-.challenger-2-container-name{
+.challenger-2-container-guess {
 	display:inline-block;
 	margin: 20px;
 }
@@ -178,12 +183,10 @@ input{
 	display: inline-block;
 	margin-right: 20px;
 }
-#challenger-1-name{
+#challenger-1-name, #challenger-2-name{
 	width: 300px;
 }
-#challenger-2-name{
-	width: 300px;
-}
+
 .bold{
 	font-weight: 700;
 }
@@ -204,8 +207,7 @@ input{
 	width: 100px;
 }
 
-
-#update:hover, #submit-guess:hover, #reset-game:hover, #clear-game:hover {
+.pill:hover, .active:hover, .inactive.hover {
 	background-color: #dd1972;
 	color: #FFFFFF;
 }
@@ -241,11 +243,7 @@ li p{
 .score-challenger-1 p{
  	text-align: center;
 }
-.score-challenger-1{
-	display: inline-block;
-	position: relative;
-}
-.score-challenger-2{
+.score-challenger-1, .score-challenger-2{
 	display: inline-block;
 	position: relative;
 }
