@@ -7,23 +7,23 @@ var setRange = document.getElementById('set-range');
 var submitGuessBtn = document.getElementById('submit-guess');
 var resetGameBtn = document.getElementById('reset-game');
 var clearGameBtn = document.getElementById('clear-game');
-var challengerName1 = document.getElementById('challenger-1-name');
-var challengerName2 = document.getElementById('challenger-2-name');
-var challenger1Guess = document.getElementById('challenger-1-guess');
-var challenger2Guess = document.getElementById('challenger-2-guess');
+// var challengerName1 = document.getElementById('challenger-1-name');
+// var challengerName2 = document.getElementById('challenger-2-name');
+// var challenger1Guess = document.getElementById('challenger-1-guess');
+// var challenger2Guess = document.getElementById('challenger-2-guess');
 
 //Allison's VAR JS
-// var submitGuessBtn = document.querySelector('#submit-guess');
-// var clearGameBtn = document.querySelector('#clear-game')
-// var challengerName1 = document.querySelector('.challenger-1-name');
-// var challenger1Guess = document.querySelector('.challenger-1-guess');
-// var challengerName2 = document.querySelector('.challenger-2-name');
-// var challenger2Guess = document.querySelector('.challenger2-guess');
-//latest score ID's I added in HTML
-// var	challenger1UpdateName = document.querySelector('#update-challenger1-name');
-// var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess');
-// var challenger2UpdateName = document.querySelector('#update-challenger2-name');
-// var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
+var submitGuessBtn = document.querySelector('#submit-guess');
+var clearGameBtn = document.querySelector('#clear-game')
+var challengerName1 = document.querySelector('.challenger-1-name');
+var challenger1Guess = document.querySelector('.challenger-1-guess');
+var challengerName2 = document.querySelector('.challenger-2-name');
+var challenger2Guess = document.querySelector('.challenger2-guess');
+latest score ID's I added in HTML
+var	challenger1UpdateName = document.querySelector('#update-challenger1-name');
+var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess');
+var challenger2UpdateName = document.querySelector('#update-challenger2-name');
+var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
 //End of Allison's VAR JS
 
 //Start of Ayla's JS
@@ -79,6 +79,12 @@ submitGuessBtn.addEventListener('click', function challengerData(e) {
 	challengerGuess2.innerHTML = cguess2;
 }) //end of Allisons submit button
 
-
+//I'm not able to click the button to see if this works
+clearGameBtnn.addEventListener('click', function() {
+  challenger1Guess.value = '';
+  challenger2Guess.value = '';
+  clearGameBtn.disabled = true;
+  clearGameBtn.classList.add('hide');
+}); //end of Allisons clear game btn
 
 

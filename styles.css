@@ -77,8 +77,8 @@ aside{
 	flex: 50%;	
 }
 
-.cards{
-	width: 50%;
+/*.cards{  //removed to see if it would enable flex
+	width: 50%;*/
 }
 form{
 	border-style: solid;
@@ -257,6 +257,8 @@ a{
 	padding-bottom: 3px;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 479px) {
 
+body {
+	min-width: 320px;
 }
