@@ -30,19 +30,16 @@ challengerName1.addEventListener('keyup', checkInputFields);
 challengerName2.addEventListener('keyup', checkInputFields);
 challenger1Guess.addEventListener('keyup', checkInputFields);
 challenger2Guess.addEventListener('keyup', checkInputFields);
+submitGuessBtn.addEventListener('click', resetGame);
 
 
 function changeRange(e) {
 	e.preventDefault();
 	console.log(e);
-	// var newMin = minRange.value;
-	// console.log('minRange:  ', minRange.value);
 	minValue.innerText = minRange.value;
 	maxValue.innerText = maxRange.value;
 	minRange = parseInt(minRange.value);
 	maxRange = parseInt(maxValue.value);
-	var defaultMin = 1;
-	var defaultMax = 100;
 	console.log(minRange);
 };
 
@@ -50,7 +47,7 @@ function checkInputFields(e) {
 	if (challengerName1.value !== "" && challengerName2.value !== "" && challenger1Guess.value !== "" && challenger2Guess.value !== "") {
 		console.log(e);
 		submitGuessBtn.disabled = false;
-		clearGuessBtn.disabled = false;
+		clearGameBtn.disabled = false;
 	} else if (challengerName1.value !== "" || challengerName2.value !== "" || challenger1Guess.value !== "" || challenger2Guess.value !== "") {
 		console.log('clear');
 		submitGuessBtn.disabled = true;
@@ -58,7 +55,11 @@ function checkInputFields(e) {
 	} else {
 		console.log(e);
 		submitGuessBtn.disabled = true;
-		clearGuessBtn.disabled = true;
+		clearGameBtn.disabled = true;
 	};
 };
+
+function resetGame() {
+	location.reload();
+}
 
