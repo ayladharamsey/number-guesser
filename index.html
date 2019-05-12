@@ -14,7 +14,7 @@
 		</div>
 	</header>
 	<main class="container">
-		<div class="leftpane">
+		<div class="leftpane"> 
 			<form class="set-range" id="set-range">
 				<h4>Set Range</h4>
 				<div class="min-container">
@@ -31,48 +31,48 @@
 				<p>The Current Range is <span class="bold" id="min-value"> 1 </span> to <span class="bold" id="max-value">100</span></p>
 				<h4>Challenger 1</h4>
 					<div class="challenger1-container">
-						<div class="challenger-1-container-name">
-							<label>Name</label>
+						<div class="challenger-1-container-name"> 
+							<label class="update-challenger1-name">Name</label> <!-- AW added class for JS -->
 							<input type="text" id="challenger-1-name">
 						</div>
 						<div class="challenger-1-container-guess">
-							<label>Guess</label> 
+							<label class="update-challenger1-guess">Guess</label> <!-- AW added class for JS -->
 							<input type="text" id="challenger-1-guess">	
 						</div>
 					</div>
 				<h4>Challenger 2</h4>
 					<div class="challenger2-container">
 						<div class="challenger-2-container-name">
-							<label>Name</label>
+							<label class="update-challenger2-name">Name</label> <!-- AW added class for JS -->
 							<input type="text" id="challenger-2-name">
 						</div>
 						<div class="challenger-2-container-guess">
-							<label>Guess</label>
+							<label class="update-challenger2-guess">Guess</label> <!-- AW added class for JS -->
 							<input type="text" id="challenger-2-guess">
 						</div>	
 					</div>
 				<div class="buttons">	
 					<button type="button" class="pill active" id="submit-guess" disabled>SUBMIT GUESS</button>
-					<button type="button"class="pill inactive" id="reset-game" disabled>RESET GUESS</button>
-					<button type="button"class="pill inactive" id="clear-game" disabled>CLEAR GAME</button>
+					<button type="button" class="pill inactive" id="reset-game" disabled>RESET GUESS</button>
+					<button type="button" class="pill inactive" id="clear-game" disabled>CLEAR GAME</button>
 				</div>		
 			</form>
 			<section>
 				<h4>Latest Score</h4>
 				<div class="score-challenger-1">
 					<p>
-						<span class="bold" id="latest-challenger-1-name">Challenger 1 Name</span> <br>current guess
-					</p>
-					<h1> <span class="h1-bold" id="challenger-1-guess-pink">97</span>
+						<span id="update-challenger1-name" class="bold">Challenger 1 Name</span> current guess
+					</p> <!-- AW added id for JS -->
+					<h1> <span id="update-challenger1-guess" class="h1-bold">97</span> <!-- AW added id for JS -->
 					</h1>
 					<p class="status">that's too high</p>
 				</div>
 				<div class="score-challenger-2">
 					<p>
-						<span class="bold" id="latest-challenger-2-name">Challenger 2 Name</span> <br>current guess
-					</p>
+						<span id="update-challenger2-name" class="bold">Challenger 2 Name</span> current guess
+					</p> <!-- AW added id for JS -->
 					<h1>
-						<span class="h1-bold" id="challenger-2-guess-pink">3</span>
+						<span id="update-challenger2-guess" class="h1-bold">3</span> <!-- AW added id for JS -->
 					</h1>
 					<p class="status"> that's too low</p>
 				</div>
@@ -80,7 +80,7 @@
 
 			</section>
 		</div>	<!-- test for leftplane and flexbox -->
-		<div class="rightpane">
+		<div class="rightpane"> <!-- ADD CLASS AND FLEX -->
 			<aside class="cards">
 				<ul>
 					<li id="card-1">

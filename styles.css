@@ -81,7 +81,6 @@ aside{
 
 .cards{
 	width: 50%;
-
 }
 form{
 	border-style: solid;
@@ -205,7 +204,8 @@ input{
 	width: 100px;
 }
 
-.pill:hover, .active:hover, /*.inactive.hover */{
+
+#update:hover, #submit-guess:hover, #reset-game:hover, #clear-game:hover {
 	background-color: #dd1972;
 	color: #FFFFFF;
 }
@@ -273,6 +273,8 @@ a{
 	padding-bottom: 3px;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 479px) {
 
+body {
+	min-width: 320px;
 }
