@@ -1,3 +1,4 @@
+//******VARIABLES******
 var minRange = document.getElementById('min-range');
 var maxRange = document.getElementById('max-range');
 var minValue = document.getElementById('min-value');
@@ -26,14 +27,17 @@ var challenger2UpdateName = document.querySelector('#update-challenger2-name');
 var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
 //End of Allison's VAR JS
 
+//*******EVENT LISTENERS******
 //Start of Ayla's JS
-setRange.addEventListener('submit', changeRange);
+setRange.addEventListener('submit', changeRange)
 challengerName1.addEventListener('keyup', checkInputFields);
 challengerName2.addEventListener('keyup', checkInputFields);
 challenger1Guess.addEventListener('keyup', checkInputFields);
 challenger2Guess.addEventListener('keyup', checkInputFields);
+clearGameBtnn.addEventListener('click', clearInputs);
 
 
+//******FUNCTIONS******
 function changeRange(e) {
 	e.preventDefault();
 	console.log(e);
@@ -66,8 +70,9 @@ function checkInputFields(e) {
 
 // Submit button by Allison
 // 	submit name was working but stoped once I added
-// 	guess still needs editing to work
-submitGuessBtn.addEventListener('click', function challengerData(e) {
+// 	needs editing/debugging 
+
+function challengerData(e) {
 	e.preventDefault();
 	var cname1 = challengerName1.value;
 	challenger1UpdateName.innerHTML = cname1;
@@ -77,14 +82,15 @@ submitGuessBtn.addEventListener('click', function challengerData(e) {
 	challengerGuess1.innerHTML = cguess1;
 	var cguess2 = challenger2Guess.value;
 	challengerGuess2.innerHTML = cguess2;
-}) //end of Allisons submit button
+} //end of Allisons submit button
 
 //I'm not able to click the button to see if this works
-clearGameBtnn.addEventListener('click', function() {
+
+ function clearInputs(e) {
   challenger1Guess.value = '';
   challenger2Guess.value = '';
   clearGameBtn.disabled = true;
   clearGameBtn.classList.add('hide');
-}); //end of Allisons clear game btn
+} //end of Allisons clear game btn
 
 
