@@ -24,30 +24,37 @@ var	challenger1UpdateName = document.querySelector('#update-challenger1-name');
 var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess');
 var challenger2UpdateName = document.querySelector('#update-challenger2-name');
 var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
+var winningNumber = generateRandomNumber(min = 1, max = 100);
+console.log(winningNumber);
 
 //*******EVENT LISTENERS******
-//Start of Ayla's JS
 setRange.addEventListener('submit', changeRange)
 challengerName1.addEventListener('keyup', checkInputFields);
 challengerName2.addEventListener('keyup', checkInputFields);
 challenger1Guess.addEventListener('keyup', checkInputFields);
 challenger2Guess.addEventListener('keyup', checkInputFields);
-<<<<<<< HEAD
-clearGameBtnn.addEventListener('click', clearInputs);
-=======
-submitGuessBtn.addEventListener('click', resetGame);
->>>>>>> function-buildout
+clearGameBtn.addEventListener('click', clearInputs);
+resetGameBtn.addEventListener('click', resetGame);
+submitGuessBtn.addEventListener('click', challengerData);
 
 
 //******FUNCTIONS******
+function generateRandomNumber(num1, num2) {
+   return Math.floor(Math.random() * (num2 - num1 +1)) + num1;
+}
+function replaceRanges() {
+	minRange = parseInt(document.getElementById('min-range').value);
+	maxRange = parseInt(document.getElementById('max-range').value);
+	console.log(minRange, maxRange);
+	minValue.innerText = minRange;
+	maxValue.innerText = maxRange;
+}
+
 function changeRange(e) {
 	e.preventDefault();
-	console.log(e);
-	minValue.innerText = minRange.value;
-	maxValue.innerText = maxRange.value;
-	minRange = parseInt(minRange.value);
-	maxRange = parseInt(maxValue.value);
-	console.log(minRange);
+	replaceRanges();
+	winningNumber = generateRandomNumber(minRange, maxRange);
+	console.log(winningNumber);
 };
 
 function checkInputFields(e) {
@@ -64,11 +71,7 @@ function checkInputFields(e) {
 		submitGuessBtn.disabled = true;
 		clearGameBtn.disabled = true;
 	};
-}; //End of Ayla's JS
-
-// Submit button by Allison
-// 	submit name was working but stoped once I added
-// 	needs editing/debugging 
+}; 
 
 function challengerData(e) {
 	e.preventDefault();
@@ -76,21 +79,23 @@ function challengerData(e) {
 	challenger1UpdateName.innerHTML = cname1;
 	var cname2 = challengerName2.value;
 	challenger2UpdateName.innerHTML = cname2;
-	var cguess1 = challenger1Guess.value;
-	challengerGuess1.innerHTML = cguess1;
-	var cguess2 = challenger2Guess.value;
-	challengerGuess2.innerHTML = cguess2;
-} //end of Allisons submit button
+	var cguess1 = parseInt(challenger1Guess.value);
+	challenger1UpdateGuess.innerHTML = cguess1;
+	var cguess2 = parseInt(challenger2Guess.value);
+	challenger2UpdateGuess.innerHTML = cguess2;
+} 
 
  function clearInputs(e) {
   challenger1Guess.value = '';
   challenger2Guess.value = '';
   clearGameBtn.disabled = true;
   clearGameBtn.classList.add('hide');
-} //end of Allisons clear game btn
-
+} 
 
 function resetGame() {
 	location.reload();
 }
 
+// write conditional function to compare numbers  
+// check the most obvious things first, first check: did they win? if so change feedback text to boom
+// if neither user gets winning number, then start with conditional statements about whether it is too hight or too low
