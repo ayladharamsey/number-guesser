@@ -83,7 +83,8 @@ function challengerData(e) {
 	challenger1UpdateGuess.innerHTML = cguess1;
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
-} 
+} //end of Allisons submit button
+
 
  function clearInputs(e) {
   challenger1Guess.value = '';
