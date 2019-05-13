@@ -48,12 +48,18 @@ function replaceRanges() {
 	console.log(minRange, maxRange);
 	minValue.innerText = minRange;
 	maxValue.innerText = maxRange;
+	
+}
+function clearRangeField(){
+	minRange.value = ('');
+	maxRange.value = ('');
 }
 
 function changeRange(e) {
 	e.preventDefault();
 	replaceRanges();
 	winningNumber = generateRandomNumber(minRange, maxRange);
+	clearRangeField();
 	console.log(winningNumber);
 };
 
@@ -83,6 +89,10 @@ function challengerData(e) {
 	challenger1UpdateGuess.innerHTML = cguess1;
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
+	challengerName1.value = ('');
+	challengerName2.value = ('');
+	challenger1Guess.value = ('');
+	challenger2Guess.value = ('');
 } 
 
  function clearInputs(e) {
@@ -93,7 +103,10 @@ function challengerData(e) {
 } 
 
 function resetGame() {
-	location.reload();
+	challengerName1.value = '';
+	challengerName2.value ='';
+	challenger1Guess.value = '';
+	challenger2Guess.value = '';
 }
 
 // write conditional function to compare numbers  
