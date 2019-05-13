@@ -8,24 +8,22 @@ var setRange = document.getElementById('set-range');
 var submitGuessBtn = document.getElementById('submit-guess');
 var resetGameBtn = document.getElementById('reset-game');
 var clearGameBtn = document.getElementById('clear-game');
-// var challengerName1 = document.getElementById('challenger-1-name');
-// var challengerName2 = document.getElementById('challenger-2-name');
-// var challenger1Guess = document.getElementById('challenger-1-guess');
-// var challenger2Guess = document.getElementById('challenger-2-guess');
-
-//Allison's VAR JS
-var submitGuessBtn = document.querySelector('#submit-guess');
-var clearGameBtn = document.querySelector('#clear-game')
-var challengerName1 = document.querySelector('.challenger-1-name');
-var challenger1Guess = document.querySelector('.challenger-1-guess');
-var challengerName2 = document.querySelector('.challenger-2-name');
-var challenger2Guess = document.querySelector('.challenger2-guess');
-latest score ID's I added in HTML
+var challengerName1 = document.getElementById('challenger-1-name');
+var challengerName2 = document.getElementById('challenger-2-name');
+var challenger1Guess = document.getElementById('challenger-1-guess');
+var challenger2Guess = document.getElementById('challenger-2-guess');
+var scoreChallenger1 = document.getElementById('score-challenger-1');
+var status = document.querySelector('.status');
+var challenger1CardHead = document.querySelector('.challenger-1-card-head');
+var challenger2CardHead = document.querySelector('.challenger-2-card-head');
+var winner = document.querySelector('.winner');
+var cards = document.querySelector('.cards');
+var card1 = document.getElementById('card-1');
+var card2 = document.getElementById('card-2');
 var	challenger1UpdateName = document.querySelector('#update-challenger1-name');
 var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess');
 var challenger2UpdateName = document.querySelector('#update-challenger2-name');
 var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
-//End of Allison's VAR JS
 
 //*******EVENT LISTENERS******
 //Start of Ayla's JS
@@ -83,8 +81,6 @@ function challengerData(e) {
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
 } //end of Allisons submit button
-
-//I'm not able to click the button to see if this works
 
  function clearInputs(e) {
   challenger1Guess.value = '';

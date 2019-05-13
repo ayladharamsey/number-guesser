@@ -51,9 +51,11 @@
 							<input type="text" id="challenger-2-guess">
 						</div>	
 					</div>
-				<button type="submit" class="pill active" id="submit-guess" disabled>SUBMIT GUESS</button>
-				<button type="submit" class="pill inactive" id="reset-game" disabled>RESET GUESS</button>
-				<button type="submit"class="pill inactive" id="clear-game" disabled>CLEAR GAME</button> <!-- AW changed type to submit -->
+				<div class="buttons">	
+					<button type="button" class="pill active" id="submit-guess" disabled>SUBMIT GUESS</button>
+					<button type="button" class="pill inactive" id="reset-game" disabled>RESET GUESS</button>
+					<button type="button" class="pill inactive" id="clear-game" disabled>CLEAR GAME</button>
+				</div>		
 			</form>
 			<section>
 				<h4>Latest Score</h4>
@@ -61,9 +63,9 @@
 					<p>
 						<span id="update-challenger1-name" class="bold">Challenger 1 Name</span> current guess
 					</p> <!-- AW added id for JS -->
-					<h1> <span id="update-challenger2-guess" class="h1-bold">97</span> <!-- AW added id for JS -->
+					<h1> <span id="update-challenger1-guess" class="h1-bold">97</span> <!-- AW added id for JS -->
 					</h1>
-					<p>that's too high</p>
+					<p class="status">that's too high</p>
 				</div>
 				<div class="score-challenger-2">
 					<p>
@@ -72,22 +74,24 @@
 					<h1>
 						<span id="update-challenger2-guess" class="h1-bold">3</span> <!-- AW added id for JS -->
 					</h1>
-					<p> that's too low</p>
-				</div>	
+					<p class="status"> that's too low</p>
+				</div>
+			</div>	<!-- test for leftplane and flexbox -->
+
 			</section>
 		</div>	<!-- test for leftplane and flexbox -->
 		<div class="rightpane"> <!-- ADD CLASS AND FLEX -->
 			<aside class="cards">
 				<ul>
-					<li>
+					<li id="card-1">
 						<p>
-							<span class="bold">CHALLENGER 1 NAME</span>
+							<span class="bold challenger-1-card-head">CHALLENGER 1 NAME</span>
 							VS
-							<span class="bold">CHALLENGER 2 NAME</span>
+							<span class="bold challenger-2-card-head">CHALLENGER 2 NAME</span>
 						</p>
 						<hr>
 						<h2>
-							<span class="h2-bold">CHALLENGER 2 NAME</span>
+							<span class="h2-bold winner">CHALLENGER 2 NAME</span>
 							WINNER
 						</h2>
 						<hr>
@@ -103,15 +107,15 @@
 							<a href="">x</a>
 						</button>	 
 					</li>
-					<li>
+					<li id="card-2">
 						<p class="">
-							<span class="bold">CHALLENGER 1 NAME</span>
+							<span class="bold challenger-1-card-head">CHALLENGER 1 NAME</span>
 							VS
-							<span class="bold">CHALLENGER 2 NAME</span>
+							<span class="bold challenger-2-card-head">CHALLENGER 2 NAME</span>
 						</p>
 						<hr>
 						<h2>
-							<span class="h2-bold">CHALLENGER 1 NAME</span>
+							<span class="h2-bold winner">CHALLENGER 1 NAME</span>
 							WINNER
 						</h2>
 						<hr>
@@ -129,13 +133,13 @@
 					</li>
 					<li>
 						<p>
-							<span class="bold">CHALLENGER 1 NAME</span>
+							<span class="bold challenger-1-card-head">CHALLENGER 1 NAME</span>
 							VS
-							<span class="bold">CHALLENGER 2 NAME</span>
+							<span class="bold challenger-2-card-head">CHALLENGER 2 NAME</span>
 						</p>
 						<hr>
 						<h2>
-							<span class="h2-bold">CHALLENGER 1 NAME</span>
+							<span class="h2-bold winner">CHALLENGER 1 NAME</span>
 							WINNER
 						</h2>
 						<hr>
