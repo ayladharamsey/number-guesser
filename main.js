@@ -87,11 +87,16 @@ function challengerData(e) {
 
 
  function clearInputs(e) {
+  minRange.disabled = true; //
+  maxRange.disabled = true;//
   challenger1Guess.value = '';
   challenger2Guess.value = '';
-  clearGameBtn.disabled = true;
+  challengerName1.value = ''; //
+  challengerName2.value = ''; //
+  clearGameBtn.disabled = false;
   clearGameBtn.classList.add('hide');
 } 
+
 
 function resetGame() {
 	location.reload();
