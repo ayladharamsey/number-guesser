@@ -257,8 +257,10 @@ a{
 	padding-bottom: 3px;
 }
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 320px) {
 
 body {
-	min-width: 320px;
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
 }

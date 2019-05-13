@@ -34,7 +34,10 @@ challengerName1.addEventListener('keyup', checkInputFields);
 challengerName2.addEventListener('keyup', checkInputFields);
 challenger1Guess.addEventListener('keyup', checkInputFields);
 challenger2Guess.addEventListener('keyup', checkInputFields);
-clearGameBtnn.addEventListener('click', clearInputs);
+submitGuessBtn.addEventListener('click', resetGame);
+clearGameBtn.addEventListener('click', clearInputs);
+resetGameBtn.addEventListener('click', resetGame);
+submitGuessBtn.addEventListener('click', challengerData);
 
 
 //******FUNCTIONS******
@@ -68,9 +71,6 @@ function checkInputFields(e) {
 	};
 }; //End of Ayla's JS
 
-// Submit button by Allison
-// 	submit name was working but stoped once I added
-// 	needs editing/debugging 
 
 function challengerData(e) {
 	e.preventDefault();
@@ -78,10 +78,10 @@ function challengerData(e) {
 	challenger1UpdateName.innerHTML = cname1;
 	var cname2 = challengerName2.value;
 	challenger2UpdateName.innerHTML = cname2;
-	var cguess1 = challenger1Guess.value;
-	challengerGuess1.innerHTML = cguess1;
-	var cguess2 = challenger2Guess.value;
-	challengerGuess2.innerHTML = cguess2;
+	var cguess1 = parseInt(challenger1Guess.value);
+	challenger1UpdateGuess.innerHTML = cguess1;
+	var cguess2 = parseInt(challenger2Guess.value);
+	challenger2UpdateGuess.innerHTML = cguess2;
 } //end of Allisons submit button
 
 //I'm not able to click the button to see if this works
