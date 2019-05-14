@@ -1,0 +1,103 @@
+@media screen and (max-width: 1040px) {
+
+	body {
+		background-color: red;
+	}
+
+	header	{
+		display: flex
+	}
+
+
+	.heading {
+		/*display: inline-block;*/
+		margin: auto;
+	}
+
+	.container {
+		display: flex;
+
+	.leftpane {
+		display: 50%;
+	}
+
+	aside {
+		flex: 50%;
+	
+	}
+
+	buttons {
+
+	}
+
+	.cards {
+		width: 50%
+	}	
+
+}
+@media screen and (max-width: 768px) {
+
+	body {
+		background-color: yellow;
+	}
+
+	header {
+		display: flex;
+	}
+
+	.heading {
+
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	.leftpane {
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+	}
+	
+	.cards {
+		width: 100%;
+	}
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) 	{
+
+	body {
+		background-color: blue;
+	} 
+
+	header {
+		display: flex;
+	}
+
+	.container {
+		flex-direction: column;
+		flex-wrap-wrap;
+	}
+
+	.leftpane {
+		float: none;
+		height: 400px;
+		width: 100%;
+	}
+
+	.cards {
+		float: none;
+		height: 200px;
+		width: 100%;
+	}
+
+}
+
+/*body {
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+*/
