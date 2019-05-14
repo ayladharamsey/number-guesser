@@ -16,7 +16,7 @@ var scoreChallenger1 = document.getElementById('score-challenger-1');
 var status = document.querySelector('.status');
 var challenger1CardHead = document.querySelector('.challenger-1-card-head');
 var challenger2CardHead = document.querySelector('.challenger-2-card-head');
-var winner = document.querySelector('.winner');
+// var winner = document.querySelector('.winner');
 var cards = document.querySelector('.cards');
 var card1 = document.getElementById('card-1');
 var card2 = document.getElementById('card-2');
@@ -29,6 +29,7 @@ var challenger1Hint = document.getElementById('challenger-1-hint');
 var challenger2Hint = document.getElementById('challenger-2-hint');
 var lowRange = 1;
 var highRange = 100;
+// var winnerName = winning();
 console.log(winningNumber);
 
 //*******EVENT LISTENERS******
@@ -122,9 +123,10 @@ function submitChallengerData(e) {
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
 	determineWinner();
+	// winning();
+	// winnerCardHeaderUpdate();
 	clearInputs();
 	};
-
 
  function clearInputs(e) {
   minRange.disabled = true; 
@@ -137,7 +139,6 @@ function submitChallengerData(e) {
   clearGameBtn.classList.add('hide');
 } 
 
-
 function resetGame() {
 	challenger1Guess.value = '';
 	challenger2Guess.value = '';
@@ -147,8 +148,17 @@ function resetGame() {
   	console.log(winningNumber);
 }
 
+// function winning(){
+// 	//if challenger 1/2 hint evaluates to boom then 
+// 	if (challenger1Hint = 'BOOM!') {
+// 		winner.innerText =challengerName1.value;
+// 	}if (challenger2Hint = 'BOOM!'){
+// 		winner.innerText = challengerName2.value;
+// 		};
+// 	};
 
+// function winnerCardHeaderUpdate() {
+// 	challengerName1.value = challenger1CardHead.innerText;
+// 	challengerName2.value = challenger2CardHead.innerText;
+// }
 
-// write conditional function to compare numbers  
-// check the most obvious things first, first check: did they win? if so change feedback text to boom
-// if neither user gets winning number, then start with conditional statements about whether it is too hight or too low
