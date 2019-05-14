@@ -1,10 +1,22 @@
 * {
 	box-sizing: border-box; 
+	
 }
 
 body { /*ADDED BODY TO CSS*/
 	font-family: 'Open Sans', sans-serif;
-}		
+}
+/*****HEADER*******/		
+header {
+	background-color: #404041;
+	display: flex;
+	align-items: center;
+}
+
+.heading {
+	display: inline-block;
+	margin: auto;
+}
 
 h1 {
 	font-family: open sans;
@@ -22,16 +34,6 @@ span { /*changed .h1-bold class from to span*/
 	font-family: open sans;
 }
 
-header {
-	background-color: #404041;
-	display: flex;
-	align-items: center;
-}
-
-.heading {
-	display: inline-block;
-	margin: auto;
-}
 
 h3 {
 	overflow: hidden;
@@ -57,7 +59,7 @@ h3:after {
  left: 0.5em;
  margin-right: -50%;
 }
-
+/******MAIN CONTAINER******/
 .container { /*tyring out flex*/
 	display: flex;
 	/*flex-direction: column;*/
@@ -66,9 +68,11 @@ h3:after {
     background-color: #F7F7F7;
 	
 }
+
 .leftpane {
 	width: 50%;
-}
+}  
+
 .buttons{
 	margin-top: 20px;
 }
@@ -77,13 +81,13 @@ aside {
 	background-color: #D0D2D3;
 	flex: 50%;
 	padding: 30px;
-/*	width: 50%;*/
 }
 
-.cards{
+.cards {
 	width: 50%;
 }
-form{
+
+form {
 	border-style: solid;
 	border-width: 2px;
 	border-color: #D0D2D3;
@@ -98,6 +102,7 @@ section {
 	border-color:#D0D2D3;
 	margin: 10px;
 	padding: 10px;
+	display: flex;
 }
 
 h3 {
@@ -114,11 +119,12 @@ h2 {
 	font-weight: 300;
 }
 
-.h2-bold{
+.h2-bold {
 	display: block;
 	font-weight: 700;
 }
-h4{
+
+h4 {
 	font-family: open sans;
     font-weight: 700;
     color: #404041;
@@ -126,12 +132,12 @@ h4{
     font-size: 18px;
 }
 
-p, label{
+p, label {
 	font-family: open sans;
 	font-weight: 300;
 	color: #404041;
 }
-.min-range, .max-range{
+.min-range, .max-range {
 	width: 170px;
 	margin-top: 10px;
 }
@@ -140,10 +146,11 @@ p, label{
 	font-weight: 700;
 }
 
-label{
+label {
 	display: block;
 }
-input{
+
+input {
 	border-style: solid;
 	border-color: #D0D2D3;
 	height: 35px;
@@ -156,42 +163,48 @@ input{
 	margin-right: 20px;
 }
 
-.max-container{
+.max-container {
 	display: inline-block;
 	margin-right: 20px;
 }
 
-.challenger-1-name{
+.challenger-1-name {
 	display: inline-block;
 	margin-right: 20px;
 }
-.challenger-1-container-name, .challenger-2-container-name{
+
+.challenger-1-container-name, .challenger-2-container-name {
 	display:inline-block;
 	margin: 20px;
 }
-.challenger-1-container-guess{
+
+.challenger-1-container-guess {
 	display:inline-block;
 }
+
 .challenger-2-container-guess {
 	display:inline-block;
 	margin: 20px;
-}
-.challenger-2-container-guess{
+} 
+
+.challenger-2-container-guess {
 	display:inline-block;
 }
-.challenger-1-guess{
+
+.challenger-1-guess {
 	display: inline-block;
 	margin-right: 20px;
 }
-#challenger-1-name, #challenger-2-name{
+
+#challenger-1-name, #challenger-2-name {
 	width: 300px;
 }
 
-.bold{
+.bold {
 	font-weight: 700;
 }
 
-.pill{
+.pill {
 	width: 150px;
 	height: 30px;
 	border-radius: 500px;
@@ -203,7 +216,7 @@ input{
 	margin: 10px;
 }
 
-#update{
+#update {
 	width: 100px;
 }
 
@@ -222,12 +235,12 @@ input{
 	color:#FFFFFF;
 }
 
-ul{
+ul {
 	margin:0px;
 	padding: 0px;
 }
 
-li{
+li {
 	list-style: none;
 	border-style: solid;
 	border-width: 2px;
@@ -237,25 +250,34 @@ li{
 	margin: 10px;
 } 
 
-li p{
+li p {
 	text-align: center;
 }
+
 .score-challenger-1 p{
  	text-align: center;
 }
+
 .score-challenger-1, .score-challenger-2{
 	display: inline-block;
 	position: relative;
+
+/*.latest-score-box-divider {
+	background: #D1D2D4;
+  	width: 2px;*/
 }
-.score-challenger-2 p{
+
+.score-challenger-2 p { 
  	text-align: center;
 }
-.bottom{
+
+.bottom {
 	text-align:left;
 	display: inline;
 	margin-right: 60px
 }
-.round{
+
+.round {
 	border-radius: 50%;
 	text-align: center;
 	background-color: #404041;
@@ -263,18 +285,11 @@ li p{
 	height: 30px;
 	float: right;
 }
-a{
+
+a {
 	color:#FFFFFF;
 	text-align: center;
 	text-decoration: none;
 	font-size: 15px;
 	padding-bottom: 3px;
-}
-
-@media screen and (max-width: 320px) {
-
-body {
-	display: flex;
-	flex-direction: column;
-    flex-wrap: wrap;
 }
