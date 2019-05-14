@@ -29,6 +29,8 @@ console.log(winningNumber);
 
 //*******EVENT LISTENERS******
 setRange.addEventListener('submit', changeRange)
+challengerName1.addEventListener('keyup', checkAlphaName);//alphanumeric
+challengerName2.addEventListener('keyup', checkAlphaName);
 challengerName1.addEventListener('keyup', checkInputFields);
 challengerName2.addEventListener('keyup', checkInputFields);
 challenger1Guess.addEventListener('keyup', checkInputFields);
@@ -85,6 +87,13 @@ function challengerData(e) {
 	challenger2UpdateGuess.innerHTML = cguess2;
 } //end of Allisons submit button
 
+//WORK IN PROGRESS (LOW PRIORITY)
+	//checking if name is alpha numeric
+// function checkAlphaName() { 
+// 	var reg = /[^A-Za-z0-9]+$/; //some examples are different
+// 	a = reg.test($('challenger-1-name', 'challenger-2-name').val()); //error:HTMLInputElement.checkAlphaName
+	// console.log(a);
+}
 
  function clearInputs(e) {
   minRange.disabled = true; //
