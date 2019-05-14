@@ -144,7 +144,6 @@ function resetGame() {
 	challengerName1.value = '';
   	challengerName2.value = '';
   	winningNumber = generateRandomNumber(parseInt(minValue.innerText), parseInt(maxValue.innerText));
-  	console.log(winningNumber);
 }
 
 
