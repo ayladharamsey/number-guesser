@@ -25,7 +25,11 @@ var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess')
 var challenger2UpdateName = document.querySelector('#update-challenger2-name');
 var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
 var winningNumber = generateRandomNumber(1,100);
-// console.log(winningNumber);
+var challenger1Hint = document.getElementById('challenger-1-hint');
+var challenger2Hint = document.getElementById('challenger-2-hint');
+var lowRange = 1;
+var highRange = 100;
+console.log(winningNumber);
 
 //*******EVENT LISTENERS******
 setRange.addEventListener('submit', changeRange)
@@ -37,7 +41,7 @@ challenger1Guess.addEventListener('keyup', checkInputFields);
 challenger2Guess.addEventListener('keyup', checkInputFields);
 clearGameBtn.addEventListener('click', clearInputs);
 resetGameBtn.addEventListener('click', resetGame);
-submitGuessBtn.addEventListener('click', challengerData);
+submitGuessBtn.addEventListener('click', submitChallengerData);
 
 
 //******FUNCTIONS******
@@ -62,6 +66,24 @@ function enableUpdate() {
 	}
 }
 
+function determineWinner() {
+  if (challenger1Guess.value > winningNumber) {
+    challenger1Hint.innerText = 'That\'s too high!';
+  } else if (challenger1Guess.value < winningNumber) {
+    challenger1Hint.innerText = 'That\'s too low!';
+  } else {
+    challenger1Hint.innerText = "BOOM!";
+  }
+
+  if (challenger2Guess.value > winningNumber) {
+    challenger2Hint.innerText = 'That\'s too high!';
+  } else if (challenger2Guess.value < winningNumber) {
+    challenger2Hint.innerText = 'That\'s too low!';
+  } else {
+    challenger2Hint.innerText = 'BOOM!';
+  };
+};
+
 function changeRange(e) {
 	e.preventDefault();
 	replaceRanges();
@@ -75,14 +97,17 @@ function checkInputFields(e) {
 		console.log(e);
 		submitGuessBtn.disabled = false;
 		clearGameBtn.disabled = false;
+		resetGameBtn.disabled = false;
 	} else if (challengerName1.value !== "" || challengerName2.value !== "" || challenger1Guess.value !== "" || challenger2Guess.value !== "") {
 		// console.log('clear');
 		submitGuessBtn.disabled = true;
 		clearGameBtn.disabled = false;
+		resetGameBtn.disabled = false;
 	} else {
 		console.log(e);
 		submitGuessBtn.disabled = true;
 		clearGameBtn.disabled = true;
+		resetGameBtn.disabled = true;
 	};
 }; 
 
@@ -96,8 +121,9 @@ function submitChallengerData(e) {
 	challenger1UpdateGuess.innerHTML = cguess1;
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
+	determineWinner();
 	clearInputs();
-} 
+	};
 
 
  function clearInputs(e) {
@@ -118,8 +144,9 @@ function resetGame() {
 	challengerName1.value = '';
   	challengerName2.value = '';
   	winningNumber = generateRandomNumber(parseInt(minValue.innerText), parseInt(maxValue.innerText));
-    console.log(winningNumber);
 }
+
+
 
 // write conditional function to compare numbers  
 // check the most obvious things first, first check: did they win? if so change feedback text to boom
