@@ -97,17 +97,27 @@ function challengerData(e) {
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
 	clearInputs();
-	
-} 
+	} 
+
+ // function clearInputs(e) {
+ //  challengerName1.value = '';
+ //  challengerName2.value ='';
+	// challengerName1.value = ('');
+	// challengerName2.value = ('');
+	// challenger1Guess.value = ('');
+	// challenger2Guess.value = ('');
 
  function clearInputs(e) {
-  challengerName1.value = '';
-  challengerName2.value ='';
+  minRange.disabled = true; //
+  maxRange.disabled = true;//
   challenger1Guess.value = '';
   challenger2Guess.value = '';
-  clearGameBtn.disabled = true;
+  challengerName1.value = ''; //
+  challengerName2.value = ''; //
+  clearGameBtn.disabled = false;
   clearGameBtn.classList.add('hide');
 } 
+
 
 function resetGame() {
 	challenger1Guess.value = '';
