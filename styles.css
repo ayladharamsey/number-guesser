@@ -6,11 +6,11 @@
 body { /*ADDED BODY TO CSS*/
 	font-family: 'Open Sans', sans-serif;
 }
-/*****HEADER*******/		
+		/******HEADER*******/		
 header {
+	align-items: center;
 	background-color: #404041;
 	display: flex;
-	align-items: center;
 }
 
 .heading {
@@ -19,13 +19,13 @@ header {
 }
 
 h1 {
-	font-family: open sans;
-	font-weight: 300;
 	color: #DD1972;
-	text-align: center;
-	padding-top: 10px;
+	font-family: open sans;
 	font-size: 50px;
+	font-weight: 300;
 	margin: auto;
+	padding-top: 10px;
+	text-align: center;
 	width: 100%;
 }
 
@@ -59,16 +59,13 @@ h3:after {
  left: 0.5em;
  margin-right: -50%;
 }
-/******MAIN CONTAINER******/
-.container { /*tyring out flex*/
-	display: flex;
-	/*flex-direction: column;*/
-    /*flex-wrap: wrap;*/
+		/******MAIN CONTAINER******/
+.container {
     align-content: center;
     background-color: #F7F7F7;
-	
+    display: flex;	
 }
-
+		/******LEFTSIDE*******/
 .leftpane {
 	width: 50%;
 }  
@@ -77,6 +74,25 @@ h3:after {
 	margin-top: 20px;
 }
 
+form {
+	border-color: #D0D2D3;
+	border-style: solid;
+	border-width: 2px;
+	font-size: 18px;
+	margin: 10px;
+	padding: 10px;
+}
+
+section {
+	border-color:#D0D2D3;
+	border-style: solid;
+	border-width: 2px;
+	display: flex;
+	margin: 10px;
+	padding: 10px;
+}
+
+			/*******RIGHTSIDE********/
 aside {
 	background-color: #D0D2D3;
 	flex: 50%;
@@ -87,23 +103,6 @@ aside {
 	width: 50%;
 }
 
-form {
-	border-style: solid;
-	border-width: 2px;
-	border-color: #D0D2D3;
-	margin: 10px;
-	padding: 10px;
-	font-size: 18px;
-}
-
-section {
-	border-style: solid;
-	border-width: 2px;
-	border-color:#D0D2D3;
-	margin: 10px;
-	padding: 10px;
-	display: flex;
-}
 
 h3 {
 	text-align: center;
@@ -114,9 +113,9 @@ h3 {
 }
 
 h2 {
-	text-align: center;
 	font-family: open sans;
 	font-weight: 300;
+	text-align: center;
 }
 
 .h2-bold {
@@ -126,20 +125,20 @@ h2 {
 
 h4 {
 	font-family: open sans;
-    font-weight: 700;
     color: #404041;
-    margin: 3px 0 5px 0;
     font-size: 18px;
+    font-weight: 700;
+    margin: 3px 0 5px 0;
 }
 
 p, label {
+	color: #404041;
 	font-family: open sans;
 	font-weight: 300;
-	color: #404041;
 }
 .min-range, .max-range {
-	width: 170px;
 	margin-top: 10px;
+	width: 170px;
 }
 
 .bold { /*USING SPAN FOR ALL .BOLD AND .H1-BOLD*/
@@ -151,11 +150,11 @@ label {
 }
 
 input {
-	border-style: solid;
 	border-color: #D0D2D3;
+	border-style: solid;
 	height: 35px;
-	width: 170px;
 	margin-top: 10px;
+	width: 170px;
 }
 
 .min-container {
@@ -205,15 +204,15 @@ input {
 }
 
 .pill {
-	width: 150px;
-	height: 30px;
 	border-radius: 500px;
 	border-style: none;
-	padding: 4px 8px 4px 8px;
-	font-weight: 700;
-	font-size: 15px;
 	display: inline-block;
+	font-size: 15px;
+	font-weight: 700;
+	height: 30px;
 	margin: 10px;
+	padding: 4px 8px 4px 8px;
+	width: 150px;
 }
 
 #update {
@@ -241,13 +240,13 @@ ul {
 }
 
 li {
-	list-style: none;
+	background-color:#F7F7F7;
+	border-color: #6e6e6e;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #6e6e6e;
-	background-color:#F7F7F7;
-	padding: 10px;
+	list-style: none;
 	margin: 10px;
+	padding: 10px;
 } 
 
 li p {
@@ -278,18 +277,18 @@ li p {
 }
 
 .round {
-	border-radius: 50%;
-	text-align: center;
 	background-color: #404041;
-	width: 30px;
-	height: 30px;
+	border-radius: 50%;
 	float: right;
+	height: 30px;
+	text-align: center;
+	width: 30px;
 }
 
 a {
 	color:#FFFFFF;
-	text-align: center;
-	text-decoration: none;
 	font-size: 15px;
 	padding-bottom: 3px;
+	text-align: center;
+	text-decoration: none;
 }
