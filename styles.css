@@ -3,10 +3,10 @@
 	
 }
 
-body { /*ADDED BODY TO CSS*/
+body { 
 	font-family: 'Open Sans', sans-serif;
-}
-/*****HEADER*******/		
+}	
+
 header {
 	background-color: #404041;
 	display: flex;
@@ -29,7 +29,7 @@ h1 {
 	width: 100%;
 }
 
-span { /*changed .h1-bold class from to span*/
+span {
 	font-weight: 700;
 	font-family: open sans;
 }
@@ -60,13 +60,10 @@ h3:after {
  margin-right: -50%;
 }
 /******MAIN CONTAINER******/
-.container { /*tyring out flex*/
+.container { 
 	display: flex;
-	/*flex-direction: column;*/
-    /*flex-wrap: wrap;*/
     align-content: center;
     background-color: #F7F7F7;
-	
 }
 
 .leftpane {
@@ -81,10 +78,6 @@ aside {
 	background-color: #D0D2D3;
 	flex: 50%;
 	padding: 30px;
-}
-
-.cards {
-	width: 50%;
 }
 
 form {
@@ -130,6 +123,7 @@ h4 {
     color: #404041;
     margin: 3px 0 5px 0;
     font-size: 18px;
+    display: block;
 }
 
 p, label {
@@ -142,7 +136,7 @@ p, label {
 	margin-top: 10px;
 }
 
-.bold { /*USING SPAN FOR ALL .BOLD AND .H1-BOLD*/
+.bold {
 	font-weight: 700;
 }
 
@@ -158,12 +152,7 @@ input {
 	margin-top: 10px;
 }
 
-.min-container {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-.max-container {
+.min-container, .max-container {
 	display: inline-block;
 	margin-right: 20px;
 }
@@ -200,10 +189,6 @@ input {
 	width: 300px;
 }
 
-.bold {
-	font-weight: 700;
-}
-
 .pill {
 	width: 150px;
 	height: 30px;
@@ -235,22 +220,20 @@ input {
 	color:#FFFFFF;
 }
 
-ul {
+.cards {
 	margin:0px;
-	padding: 0px;
-}
-
-li {
-	list-style: none;
+	padding: 10px;
+	margin: 10px;
+} 
+.new-card{
 	border-style: solid;
 	border-width: 2px;
 	border-color: #6e6e6e;
 	background-color:#F7F7F7;
-	padding: 10px;
-	margin: 10px;
-} 
+	padding: 20px;
+}
 
-li p {
+.cards p {
 	text-align: center;
 }
 
@@ -261,11 +244,6 @@ li p {
 .score-challenger-1, .score-challenger-2{
 	display: inline-block;
 	position: relative;
-
-/*.latest-score-box-divider {
-	background: #D1D2D4;
-  	width: 2px;*/
-}
 
 .score-challenger-2 p { 
  	text-align: center;
