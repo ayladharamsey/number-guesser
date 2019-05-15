@@ -14,21 +14,26 @@ var challenger1Guess = document.getElementById('challenger-1-guess');
 var challenger2Guess = document.getElementById('challenger-2-guess');
 var scoreChallenger1 = document.getElementById('score-challenger-1');
 var status = document.querySelector('.status');
+<<<<<<< Updated upstream
 var challenger1CardHead = document.querySelector('.challenger-1-card-head');
 var challenger2CardHead = document.querySelector('.challenger-2-card-head');
 var winner = document.querySelector('.winner');
 var cards = document.querySelector('.cards');
+=======
+>>>>>>> Stashed changes
 var card1 = document.getElementById('card-1');
 var card2 = document.getElementById('card-2');
 var	challenger1UpdateName = document.querySelector('#update-challenger1-name');
 var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess');
 var challenger2UpdateName = document.querySelector('#update-challenger2-name');
 var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
-var guessErrorChall1 = document.querySelector('range-error-chall1');
-var guessErrorChall2 = document.querySelector('range-error-chall2');
 var winningNumber = generateRandomNumber(1,100);
 var challenger1Hint = document.getElementById('challenger-1-hint');
 var challenger2Hint = document.getElementById('challenger-2-hint');
+var error1Name = document.querySelector('.error-entry-name1');
+var error2Name = document.querySelector('.error-entry-name2');
+var guessErrorPlayer1 = document.querySelector('.player-1-message');
+var guessErrorPlayer2= document.querySelector('.player-2-message');
 var lowRange = 1;
 var highRange = 100;
 console.log(winningNumber);
@@ -96,17 +101,14 @@ function changeRange(e) {
 
 function checkInputFields(e) {
 	if (challengerName1.value !== "" && challengerName2.value !== "" && challenger1Guess.value !== "" && challenger2Guess.value !== "") {
-		console.log(e);
 		submitGuessBtn.disabled = false;
 		clearGameBtn.disabled = false;
 		resetGameBtn.disabled = false;
 	} else if (challengerName1.value !== "" || challengerName2.value !== "" || challenger1Guess.value !== "" || challenger2Guess.value !== "") {
-		// console.log('clear');
 		submitGuessBtn.disabled = true;
 		clearGameBtn.disabled = false;
 		resetGameBtn.disabled = false;
 	} else {
-		console.log(e);
 		submitGuessBtn.disabled = true;
 		clearGameBtn.disabled = true;
 		resetGameBtn.disabled = true;
@@ -115,18 +117,39 @@ function checkInputFields(e) {
 
 function submitChallengerData(e) {
 	e.preventDefault();
-	var cname1 = challengerName1.value;
-	challenger1UpdateName.innerHTML = cname1;
-	var cname2 = challengerName2.value;
-	challenger2UpdateName.innerHTML = cname2;
-	var cguess1 = parseInt(challenger1Guess.value);
-	challenger1UpdateGuess.innerHTML = cguess1;
-	var cguess2 = parseInt(challenger2Guess.value);
-	challenger2UpdateGuess.innerHTML = cguess2;
+	var name2NoError = checkName2Error();
+	var name1NoError = checkName1Error(); 
+	if (!name1NoError && !name2NoError) {
+		error1Name.style.visibility = 'visible';
+		error2Name.style.visibility = 'visible';
+		return;
+	} else if (!name2NoError) {
+		error2Name.style.visibility = 'visible';
+		return;
+	} else if (!name1NoError){
+		error1Name.style.visibility = 'visible';
+		return;
+	}
+	var guess1NoError = checkGuess1Error();
+	var guess2NoError = checkGuess2Error();
+	if (!guess1NoError && !guess2NoError){
+		console.log('ay!')
+		guessErrorPlayer1.style.visibility = 'visible';
+		guessErrorPlayer2.style.visibility = 'visible';
+		return;
+	} else if (!guess1NoError){
+		guessErrorPlayer1.style.visibility = 'visible';
+		return;
+	} else if (!guess2NoError){
+		guessErrorPlayer2.style.visibility = 'visible';
+		return;
+	}
+	challenger1UpdateName.innerHTML = challengerName1.value;
+	challenger2UpdateName.innerHTML = challengerName2.value;
+	challenger1UpdateGuess.innerHTML = parseInt(challenger1Guess.value);
+	challenger2UpdateGuess.innerHTML = parseInt(challenger2Guess.value);
 	determineWinner();
 	clearInputs();
-	player1NameError();
-	player1RangeError();
 	};
 
 
@@ -141,46 +164,34 @@ function submitChallengerData(e) {
   clearGameBtn.classList.add('hide');
 } 
 
-//needs debugging and refactoring
-// function playerOneErrors() {
-// 	if(parseInt(challenger1Guess) > maxRange.value || parseInt(challenger1Guess) < minRange.value) {
-//         guessErrorChall1.innerHTML = 'Pick a number within the range';
-//         challenger1UpdateGuess.classList.add('.range-error-chall1');
-//     } else if (challenger1Guess === '') {
-//         guessErrorChall1.innerHTML = 'Please pick a valid entry.';
-//         challenger1UpdateGuess.classList.add('not-a-number');
-//     } else if (isNaN(parseInt(challenger1Guess))) {
-//         guessErrorChall1.innerHTML = "Please pick a valid number";
-//         challenger1UpdateGuess.classList.add('.not-a-number');
-//     } else {
-//         guessErrorChall1.innerHTML = '';
-//         updateChallenger1Guess.innerHTML = challenger1Guess;
-//         challenger1UpdateGuess.classList.remove('.error-entry-min-max');
-//     }
-// }
+function checkName1Error(){
+	var noError = true;
+	if (challengerName1.value === ''){
+		error1Name.style.visibility = 'visible';
+	noError = false;
+	};
+	return noError
+};
 
-function player1NameError(e) {
-	var target = document.querySelector('.error-entry-name1');
-	if (challengerName1.value === '') {
-		errorIcon(target);
-	} else {
-		challengerName1.classList.remove('error-entry-name1');
-		removeErrorIcon(target);
-	}
-}
+function checkName2Error(){
+	var noError = true;
+	if (challengerName2.value === ''){
+		error2Name.style.visibility = 'visible';
+	noError = false;
+	};
+	return noError;
+};
 
-function player1RangeError(e) {
-  var target = document.querySelector('.range-error-chall1');
-  if (challenger1Guess.value > highRange || challenger1Guess.value < lowRange) {
-		challenger1Guess.classList.add('range-error-chall1');
-		errorIcon(target);
-	} else {
-		challenger1Guess.classList.remove('range-error-chall1');
-		removeErrorIcon(target);
-		debugger;
-	}
-}
+function checkGuess1Error(){
+	var noError = true;
+	if (parseInt(challenger1Guess.value) < parseInt(minValue.innerText) || parseInt(challenger1Guess.value) > parseInt(maxValue.innerText)){
+		guessErrorPlayer1.style.visibility = 'visible';
+	noError = false;
+	};
+	return noError;
+};
 
+<<<<<<< Updated upstream
 
 function errorIcon(target) {
 	target.innerHTML = '<img src=\'images/error-icon.svg\' alt=\'error icon\' class=\'error-icon\'> Please enter a valid input';
@@ -189,6 +200,16 @@ function errorIcon(target) {
 function removeErrorIcon(target) {
 	target.innerText = '';
 }
+=======
+function checkGuess2Error(){
+	var noError = true;
+	if (parseInt(challenger2Guess.value) < parseInt(minValue.innerText) || parseInt(challenger2Guess.value) > parseInt(maxValue.innerText)){
+		guessErrorPlayer2.style.visibility = 'visible';
+		noError = false;
+	};
+	return noError;
+};
+>>>>>>> Stashed changes
 
 function resetGame() {
 	challenger1Guess.value = '';
@@ -196,6 +217,7 @@ function resetGame() {
 	challengerName1.value = '';
   	challengerName2.value = '';
   	winningNumber = generateRandomNumber(parseInt(minValue.innerText), parseInt(maxValue.innerText));
+  	resetGameBtn.disabled = true;
 }
 
 

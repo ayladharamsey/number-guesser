@@ -59,8 +59,14 @@ h3:after {
  left: 0.5em;
  margin-right: -50%;
 }
+<<<<<<< Updated upstream
 		/******MAIN CONTAINER******/
 .container {
+=======
+
+.container { 
+	display: flex;
+>>>>>>> Stashed changes
     align-content: center;
     background-color: #F7F7F7;
     display: flex;	
@@ -92,6 +98,7 @@ section {
 	padding: 10px;
 }
 
+<<<<<<< Updated upstream
 .error-entry-min-max,
 .not-a-number,
 .error-entry-name1,
@@ -118,23 +125,28 @@ section {
 }
 
 			/*******RIGHTSIDE********/
+=======
+>>>>>>> Stashed changes
 aside {
 	background-color: #D0D2D3;
 	flex: 50%;
 	padding: 30px;
 }
 
+<<<<<<< Updated upstream
 .cards {
 	width: 50%;
 }
 
 
+=======
+>>>>>>> Stashed changes
 h3 {
-	text-align: center;
+	color: #FFFFFF;
 	font-family: open sans;
 	font-weight: 300;
-	color: #FFFFFF;
 	padding-bottom: 20px;
+	text-align: center;
 }
 
 h2 {
@@ -151,6 +163,10 @@ h2 {
 h4 {
 	font-family: open sans;
     color: #404041;
+<<<<<<< Updated upstream
+=======
+    display: block;
+>>>>>>> Stashed changes
     font-size: 18px;
     font-weight: 700;
     margin: 3px 0 5px 0;
@@ -204,11 +220,22 @@ input {
 
 .challenger-1-container-guess {
 	display:inline-block;
+	position: relative;
 }
 
+.error-name,
+.player-error-message {
+	color: #DD1972;
+	font-family: open sans;
+	font-size: 16px;
+	font-weight: 300;
+	position: absolute;
+	visibility: hidden;
+}
 .challenger-2-container-guess {
 	display:inline-block;
 	margin: 20px;
+	position: relative;
 } 
 
 .challenger-2-container-guess {
@@ -259,6 +286,7 @@ input {
 	color:#FFFFFF;
 }
 
+<<<<<<< Updated upstream
 ul {
 	margin:0px;
 	padding: 0px;
@@ -267,6 +295,13 @@ ul {
 li {
 	background-color:#F7F7F7;
 	border-color: #6e6e6e;
+=======
+.cards {
+	margin: 10px;
+	padding: 10px;
+} 
+.new-card{
+>>>>>>> Stashed changes
 	border-style: solid;
 	border-width: 2px;
 	list-style: none;
@@ -296,9 +331,9 @@ li p {
 }
 
 .bottom {
-	text-align:left;
 	display: inline;
 	margin-right: 60px
+	text-align:left;
 }
 
 .round {
