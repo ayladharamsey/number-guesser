@@ -61,7 +61,7 @@ h3:after {
 }
 
 .container { 
-	  display: flex;
+	display: flex;
     align-content: center;
     background-color: #F7F7F7;
 }
@@ -98,47 +98,18 @@ section {
 	padding: 10px;
 }
 
-.error-entry-min-max,
-.not-a-number,
-.error-entry-name1,
-.error-entry-name2,
-.range-error-chall1,
-.range-error-chall2 {
-	/*border: 2px solid #DD1972;*/
-}
-
-.error-entry-min-max,
-.not-a-number,
-.error-entry-name1,
-.error-entry-name2,
-.range-error-chall1,
-.range-error-chall2 {
-	font-color: #DD1972;
-	font-size: 16px;
-}
-
-.error-icon img {
-	height: 15px;
-	padding: ;
-	width: 15px;
-}
-
 aside {
 	background-color: #D0D2D3;
 	flex: 50%;
 	padding: 30px;
 }
 
-.cards {
-	width: 50%;
-}
-
 h3 {
-	text-align: center;
+	color: #FFFFFF;
 	font-family: open sans;
 	font-weight: 300;
-	color: #FFFFFF;
 	padding-bottom: 20px;
+	text-align: center;
 }
 
 h2 {
@@ -153,8 +124,9 @@ h2 {
 }
 
 h4 {
-	  font-family: open sans;
+	font-family: open sans;
     color: #404041;
+    display: block;
     font-size: 18px;
     display: block;
     font-weight: 700;
@@ -204,11 +176,22 @@ input {
 
 .challenger-1-container-guess {
 	display:inline-block;
+	position: relative;
 }
 
+.error-name,
+.player-error-message {
+	color: #DD1972;
+	font-family: open sans;
+	font-size: 16px;
+	font-weight: 300;
+	position: absolute;
+	visibility: hidden;
+}
 .challenger-2-container-guess {
 	display:inline-block;
 	margin: 20px;
+	position: relative;
 } 
 
 .challenger-2-container-guess {
@@ -256,9 +239,10 @@ input {
 }
 
 .cards {
-	padding: 10px;
 	margin: 10px;
+	padding: 10px;
 } 
+
 .new-card{
 	border-style: solid;
 	border-width: 2px;
@@ -284,9 +268,9 @@ input {
 }
 
 .bottom {
-	text-align:left;
 	display: inline;
 	margin-right: 60px
+	text-align:left;
 }
 
 .round {
