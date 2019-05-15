@@ -14,9 +14,6 @@ var challenger1Guess = document.getElementById('challenger-1-guess');
 var challenger2Guess = document.getElementById('challenger-2-guess');
 var scoreChallenger1 = document.getElementById('score-challenger-1');
 var status = document.querySelector('.status');
-var challenger1CardHead = document.querySelector('.challenger-1-card-head');
-var challenger2CardHead = document.querySelector('.challenger-2-card-head');
-var winner = document.querySelector('.winner');
 var cards = document.querySelector('.cards');
 var card1 = document.getElementById('card-1');
 var card2 = document.getElementById('card-2');
@@ -31,6 +28,8 @@ var challenger1Hint = document.getElementById('challenger-1-hint');
 var challenger2Hint = document.getElementById('challenger-2-hint');
 var lowRange = 1;
 var highRange = 100;
+var guessCounter = 1
+var aside = document.querySelector('.cards');
 console.log(winningNumber);
 
 //*******EVENT LISTENERS******
@@ -44,6 +43,8 @@ challenger2Guess.addEventListener('keyup', checkInputFields);
 clearGameBtn.addEventListener('click', clearInputs);
 resetGameBtn.addEventListener('click', resetGame);
 submitGuessBtn.addEventListener('click', submitChallengerData);
+aside.addEventListener('click', deleteCard);
+
 
 
 //******FUNCTIONS******
@@ -75,7 +76,9 @@ function determineWinner() {
     challenger1Hint.innerText = 'That\'s too low!';
   } else {
     challenger1Hint.innerText = "BOOM!";
-  }
+    winner1();
+  } ;
+  
 
   if (challenger2Guess.value > winningNumber) {
     challenger2Hint.innerText = 'That\'s too high!';
@@ -83,7 +86,9 @@ function determineWinner() {
     challenger2Hint.innerText = 'That\'s too low!';
   } else {
     challenger2Hint.innerText = 'BOOM!';
+    winner2();
   };
+
 };
 
 function changeRange(e) {
@@ -113,6 +118,12 @@ function checkInputFields(e) {
 	};
 }; 
 
+function deleteCard(){
+	if (event.target.className === 'delete-btn'){
+		style.display = 'none';
+	}
+}
+
 function submitChallengerData(e) {
 	e.preventDefault();
 	var cname1 = challengerName1.value;
@@ -124,11 +135,12 @@ function submitChallengerData(e) {
 	var cguess2 = parseInt(challenger2Guess.value);
 	challenger2UpdateGuess.innerHTML = cguess2;
 	determineWinner();
+	// winning();
+	// winnerCardHeaderUpdate();
 	clearInputs();
 	player1NameError();
 	player1RangeError();
 	};
-
 
  function clearInputs(e) {
   minRange.disabled = true; 
@@ -181,7 +193,6 @@ function player1RangeError(e) {
 	}
 }
 
-
 function errorIcon(target) {
 	target.innerHTML = '<img src=\'images/error-icon.svg\' alt=\'error icon\' class=\'error-icon\'> Please enter a valid input';
 }
@@ -198,8 +209,71 @@ function resetGame() {
   	winningNumber = generateRandomNumber(parseInt(minValue.innerText), parseInt(maxValue.innerText));
 }
 
+function countedGuesses() {
+	parseInt(guessCounter.value) +=1;
+}
+
+function winner1(){
+	var aside = document.querySelector('.cards');
+	var scoreCard = `
+	<div class = new-card>
+		<p>
+			<span class="bold challenger-1-card-head">${challengerName1.value}</span>
+							VS
+			<span class="bold challenger-2-card-head">${challengerName2.value}</span>
+		</p>
+		<hr>
+		<h2>
+		<span class="h2-bold winner">${challengerName1.value}</span>
+			WINNER
+		</h2>
+		<hr>
+		<p class="bottom">
+			<span class="bold">${guessCounter}</span>
+				GUESSES
+		</p>
+		<p class="bottom">
+			<span class="bold">3.5</span>
+				MINUTES
+		</p>
+		<button class="round">
+			<a href="">x</a>
+		</button>	 
+		`
+		aside.insertAdjacentHTML('afterbegin', scoreCard);
+};
+
+function winner2(){
+	var aside = document.querySelector('.cards');
+	var scoreCard = `
+	<div class = 'new-card'>
+		<p>
+			<span class="bold challenger-1-card-head">${challengerName1.value}</span>
+							VS
+			<span class="bold challenger-2-card-head">${challengerName2.value}</span>
+		</p>
+		<hr>
+		<h2>
+		<span class="h2-bold winner">${challengerName2.value}</span>
+			WINNER
+		</h2>
+		<hr>
+		<p class="bottom">
+			<span class="bold">${guessCounter}</span>
+				GUESSES
+		</p>
+		<p class="bottom">
+			<span class="bold">3.5</span>
+				MINUTES
+		</p>
+		<button class="round">
+			<a href="" class="delete-btn">x</a>
+		</button>	 
+		`
+		aside.insertAdjacentHTML('afterbegin', scoreCard);
+};
 
 
-// write conditional function to compare numbers  
-// check the most obvious things first, first check: did they win? if so change feedback text to boom
-// if neither user gets winning number, then start with conditional statements about whether it is too hight or too low
+
+
+
