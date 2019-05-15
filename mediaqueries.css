@@ -1,7 +1,8 @@
+
 @media screen and (max-width: 1040px) {
 
 	body {
-		background-color: red;
+		background-color: red; /*for setup*/
 	}
 
 	header	{
@@ -10,18 +11,22 @@
 
 
 	.heading {
-		/*display: inline-block;*/
+		background-color: cyan; /*for setup*/
+		display: block;
 		margin: auto;
 	}
 
 	.container {
+		background-color: blue; /*for setup*/
 		display: flex;
 
 	.leftpane {
+		background-color: pink; /*for setup*/
 		display: 50%;
 	}
 
 	aside {
+		background-color: yellow; /*for setup*/
 		flex: 50%;
 	
 	}
@@ -31,6 +36,7 @@
 	}
 
 	.cards {
+		background-color: green; /*for setup*/
 		width: 50%
 	}	
 
@@ -46,22 +52,26 @@
 	}
 
 	.heading {
-
+		background-color: cyan; /*for setup*/
 	}
 
 	.container {
+		background-color: blue; /*for setup*/
 		flex-direction: column;
 	}
 
 	.leftpane {
+		background-color: pink; /*for setup*/
 		width: 100%;
 	}
 
 	aside {
+		background-color: yellow; /*for setup*/
 		width: 100%;
 	}
 	
 	.cards {
+		background-color: green; /*for setup*/
 		width: 100%;
 	}
 
