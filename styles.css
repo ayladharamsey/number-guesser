@@ -3,10 +3,10 @@
 	
 }
 
-body { /*ADDED BODY TO CSS*/
+body { 
 	font-family: 'Open Sans', sans-serif;
-}
-		/******HEADER*******/		
+}	
+
 header {
 	align-items: center;
 	background-color: #404041;
@@ -29,7 +29,7 @@ h1 {
 	width: 100%;
 }
 
-span { /*changed .h1-bold class from to span*/
+span {
 	font-weight: 700;
 	font-family: open sans;
 }
@@ -59,19 +59,13 @@ h3:after {
  left: 0.5em;
  margin-right: -50%;
 }
-<<<<<<< Updated upstream
-		/******MAIN CONTAINER******/
-.container {
-=======
 
 .container { 
 	display: flex;
->>>>>>> Stashed changes
     align-content: center;
     background-color: #F7F7F7;
-    display: flex;	
 }
-		/******LEFTSIDE*******/
+  
 .leftpane {
 	width: 50%;
 }  
@@ -80,6 +74,12 @@ h3:after {
 	margin-top: 20px;
 }
 
+aside {
+	background-color: #D0D2D3;
+	flex: 50%;
+	padding: 30px;
+}
+  
 form {
 	border-color: #D0D2D3;
 	border-style: solid;
@@ -98,49 +98,12 @@ section {
 	padding: 10px;
 }
 
-<<<<<<< Updated upstream
-.error-entry-min-max,
-.not-a-number,
-.error-entry-name1,
-.error-entry-name2,
-.range-error-chall1,
-.range-error-chall2 {
-	/*border: 2px solid #DD1972;*/
-}
-
-.error-entry-min-max,
-.not-a-number,
-.error-entry-name1,
-.error-entry-name2,
-.range-error-chall1,
-.range-error-chall2 {
-	font-color: #DD1972;
-	font-size: 16px;
-}
-
-.error-icon img {
-	height: 15px;
-	padding: ;
-	width: 15px;
-}
-
-			/*******RIGHTSIDE********/
-=======
->>>>>>> Stashed changes
 aside {
 	background-color: #D0D2D3;
 	flex: 50%;
 	padding: 30px;
 }
 
-<<<<<<< Updated upstream
-.cards {
-	width: 50%;
-}
-
-
-=======
->>>>>>> Stashed changes
 h3 {
 	color: #FFFFFF;
 	font-family: open sans;
@@ -163,11 +126,9 @@ h2 {
 h4 {
 	font-family: open sans;
     color: #404041;
-<<<<<<< Updated upstream
-=======
     display: block;
->>>>>>> Stashed changes
     font-size: 18px;
+    display: block;
     font-weight: 700;
     margin: 3px 0 5px 0;
 }
@@ -182,7 +143,7 @@ p, label {
 	width: 170px;
 }
 
-.bold { /*USING SPAN FOR ALL .BOLD AND .H1-BOLD*/
+.bold {
 	font-weight: 700;
 }
 
@@ -198,12 +159,7 @@ input {
 	width: 170px;
 }
 
-.min-container {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-.max-container {
+.min-container, .max-container {
 	display: inline-block;
 	margin-right: 20px;
 }
@@ -251,10 +207,6 @@ input {
 	width: 300px;
 }
 
-.bold {
-	font-weight: 700;
-}
-
 .pill {
 	border-radius: 500px;
 	border-style: none;
@@ -286,30 +238,20 @@ input {
 	color:#FFFFFF;
 }
 
-<<<<<<< Updated upstream
-ul {
-	margin:0px;
-	padding: 0px;
-}
-
-li {
-	background-color:#F7F7F7;
-	border-color: #6e6e6e;
-=======
 .cards {
 	margin: 10px;
 	padding: 10px;
 } 
+
 .new-card{
->>>>>>> Stashed changes
 	border-style: solid;
 	border-width: 2px;
-	list-style: none;
-	margin: 10px;
-	padding: 10px;
-} 
+	border-color: #6e6e6e;
+	background-color:#F7F7F7;
+	padding: 20px;
+}
 
-li p {
+.cards p {
 	text-align: center;
 }
 
@@ -320,11 +262,6 @@ li p {
 .score-challenger-1, .score-challenger-2{
 	display: inline-block;
 	position: relative;
-
-/*.latest-score-box-divider {
-	background: #D1D2D4;
-  	width: 2px;*/
-}
 
 .score-challenger-2 p { 
  	text-align: center;
