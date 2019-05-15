@@ -92,6 +92,31 @@ section {
 	padding: 10px;
 }
 
+.error-entry-min-max,
+.not-a-number,
+.error-entry-name1,
+.error-entry-name2,
+.range-error-chall1,
+.range-error-chall2 {
+	/*border: 2px solid #DD1972;*/
+}
+
+.error-entry-min-max,
+.not-a-number,
+.error-entry-name1,
+.error-entry-name2,
+.range-error-chall1,
+.range-error-chall2 {
+	font-color: #DD1972;
+	font-size: 16px;
+}
+
+.error-icon img {
+	height: 15px;
+	padding: ;
+	width: 15px;
+}
+
 			/*******RIGHTSIDE********/
 aside {
 	background-color: #D0D2D3;
