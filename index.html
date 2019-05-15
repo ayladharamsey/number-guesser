@@ -21,15 +21,15 @@
 				<div class="min-container">
 					<label>Min Range</label>
 					<input type="number" id="min-range">
-					<div class="error-min-number not-a-number"></div>
+					<p class="error-icon error-entry-min-max not-a-number"></p> <!-- EMPTY for ERROR -->
 				</div>
 				<div class="max-container">
 					<label>Max Range</label>
 					<input type="number" id="max-range">
-					<div class="error-max-number not-a-number"></div> 
+					<p class="error-icon error-entry-min-max not-a-number"></p> <!-- EMPTY for ERROR -->
 				</div>	
 				<input type="submit" class="pill active" id="update" value="UPDATE"></input>
-				<div class="not-a-number"></div>
+				<p class="not-a-number"></p> <!-- needed?? -->
 			</form>
 			<form class="challenger-bidding">
 				<p>The Current Range is <span class="bold" id="min-value"> 1 </span> to <span class="bold" id="max-value">100</span></p>
@@ -38,12 +38,12 @@
 						<div class="challenger-1-container-name"> 
 							<label class="update-challenger1-name">Name</label> 
 							<input type="text" id="challenger-1-name">
-							<div class="error-entry-name1"></div>
+							<p class="error-icon error-entry-name1"></p> <!-- EMPTY for ERROR -->
 						</div>
 						<div class="challenger-1-container-guess">
 							<label class="update-challenger1-guess">Guess</label> 
 							<input type="number" id="challenger-1-guess">
-							<div class="range-error-chall1 not-a-number"></div>	
+							<p class="error-icon range-error-chall1 not-a-number"></p> <!-- EMPTY for ERROR -->	
 						</div>
 					</div>
 				<h4>Challenger 2</h4>
@@ -51,12 +51,12 @@
 						<div class="challenger-2-container-name">
 							<label class="update-challenger2-name">Name</label> 
 							<input type="text" id="challenger-2-name">
-							<div class="error-entry-name2"></div>
+							<p class="error-icon error-entry-name2"></p> <!-- EMPTY for ERROR -->
 						</div>
 						<div class="challenger-2-container-guess">
 							<label class="update-challenger2-guess">Guess</label> 
 							<input type="number" id="challenger-2-guess">
-							<div class="range-error-chall2 not-a-number"></div>
+							<p class="error-icon range-error-chall2 not-a-number"></p> <!-- EMPTY for ERROR -->
 						</div>	
 					</div>
 				<div class="buttons">	

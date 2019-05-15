@@ -21,6 +21,8 @@ var	challenger1UpdateName = document.querySelector('#update-challenger1-name');
 var challenger1UpdateGuess = document.querySelector('#update-challenger1-guess');
 var challenger2UpdateName = document.querySelector('#update-challenger2-name');
 var challenger2UpdateGuess = document.querySelector('#update-challenger2-guess');
+var guessErrorChall1 = document.querySelector('range-error-chall1');
+var guessErrorChall2 = document.querySelector('range-error-chall2');
 var winningNumber = generateRandomNumber(1,100);
 var challenger1Hint = document.getElementById('challenger-1-hint');
 var challenger2Hint = document.getElementById('challenger-2-hint');
@@ -136,6 +138,8 @@ function submitChallengerData(e) {
 	// winning();
 	// winnerCardHeaderUpdate();
 	clearInputs();
+	player1NameError();
+	player1RangeError();
 	};
 
  function clearInputs(e) {
@@ -148,6 +152,54 @@ function submitChallengerData(e) {
   clearGameBtn.disabled = false;
   clearGameBtn.classList.add('hide');
 } 
+
+//needs debugging and refactoring
+// function playerOneErrors() {
+// 	if(parseInt(challenger1Guess) > maxRange.value || parseInt(challenger1Guess) < minRange.value) {
+//         guessErrorChall1.innerHTML = 'Pick a number within the range';
+//         challenger1UpdateGuess.classList.add('.range-error-chall1');
+//     } else if (challenger1Guess === '') {
+//         guessErrorChall1.innerHTML = 'Please pick a valid entry.';
+//         challenger1UpdateGuess.classList.add('not-a-number');
+//     } else if (isNaN(parseInt(challenger1Guess))) {
+//         guessErrorChall1.innerHTML = "Please pick a valid number";
+//         challenger1UpdateGuess.classList.add('.not-a-number');
+//     } else {
+//         guessErrorChall1.innerHTML = '';
+//         updateChallenger1Guess.innerHTML = challenger1Guess;
+//         challenger1UpdateGuess.classList.remove('.error-entry-min-max');
+//     }
+// }
+
+function player1NameError(e) {
+	var target = document.querySelector('.error-entry-name1');
+	if (challengerName1.value === '') {
+		errorIcon(target);
+	} else {
+		challengerName1.classList.remove('error-entry-name1');
+		removeErrorIcon(target);
+	}
+}
+
+function player1RangeError(e) {
+  var target = document.querySelector('.range-error-chall1');
+  if (challenger1Guess.value > highRange || challenger1Guess.value < lowRange) {
+		challenger1Guess.classList.add('range-error-chall1');
+		errorIcon(target);
+	} else {
+		challenger1Guess.classList.remove('range-error-chall1');
+		removeErrorIcon(target);
+		debugger;
+	}
+}
+
+function errorIcon(target) {
+	target.innerHTML = '<img src=\'images/error-icon.svg\' alt=\'error icon\' class=\'error-icon\'> Please enter a valid input';
+}
+	
+function removeErrorIcon(target) {
+	target.innerText = '';
+}
 
 function resetGame() {
 	challenger1Guess.value = '';
