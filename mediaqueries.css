@@ -1,113 +1,68 @@
 
 @media screen and (max-width: 1040px) {
 
-	body {
-		background-color: red; /*for setup*/
-	}
-
-	header	{
-		display: flex
-	}
-
-
-	.heading {
-		background-color: cyan; /*for setup*/
-		display: block;
-		margin: auto;
-	}
-
-	.container {
-		background-color: blue; /*for setup*/
+.container {
 		display: flex;
-
-	.leftpane {
-		background-color: pink; /*for setup*/
-		display: 50%;
-	}
-
-	aside {
-		background-color: yellow; /*for setup*/
-		flex: 50%;
-	
-	}
-
-	buttons {
-
-	}
-
-	.cards {
-		background-color: green; /*for setup*/
-		width: 50%
-	}	
-
 }
+
+#update {
+		max-width: 20%;
+		margin: 2%;
+		font-size: 15px;
+	}
+
+h4{
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+p, label{
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.pill{
+	font-size: 15px;
+}
+
+.challenger-bidding{
+	padding:30px;
+}
+
+input{
+	width: 300px;
+}
+
 @media screen and (max-width: 768px) {
-
-	body {
-		background-color: yellow;
-	}
-
-	header {
-		display: flex;
-	}
-
-	.heading {
-		background-color: cyan; /*for setup*/
-	}
-
-	.container {
-		background-color: blue; /*for setup*/
+.container {
 		flex-direction: column;
 	}
 
-	.leftpane {
-		background-color: pink; /*for setup*/
+.leftpane {
 		width: 100%;
 	}
 
-	aside {
-		background-color: yellow; /*for setup*/
-		width: 100%;
-	}
-	
-	.cards {
-		background-color: green; /*for setup*/
+aside {
 		width: 100%;
 	}
 
+.cards {
+		width: 100%;
+	}
 }
+
 
 @media screen and (min-width: 320px) and (max-width: 450px) 	{
 
-	body {
-		background-color: blue;
-	} 
-
-	header {
-		display: flex;
-	}
-
-	.container {
-		flex-direction: column;
-		flex-wrap-wrap;
-	}
-
-	.leftpane {
-		float: none;
-		height: 400px;
-		width: 100%;
-	}
-
-	.cards {
-		float: none;
-		height: 200px;
-		width: 100%;
-	}
-
+#challenger-1-name, #challenger-2-name, input{
+	width: 150px;
 }
 
-/*body {
-	display: flex;
-	flex-direction: column;
-    flex-wrap: wrap;
-*/
+#update-challenger1-name, #update-challenger2-name{
+	font-size: 10px;
+}
+#update{
+	margin: none;
+    font-size: 15px;
+
+}
