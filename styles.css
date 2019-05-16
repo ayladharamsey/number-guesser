@@ -21,7 +21,7 @@ header {
 h1 {
 	color: #DD1972;
 	font-family: open sans;
-	font-size: 50px;
+	font-size: 75px;
 	font-weight: 300;
 	margin: auto;
 	padding-top: 10px;
@@ -72,6 +72,9 @@ h3:after {
 
 .buttons{
 	margin-top: 20px;
+	width: 100%;
+    display: inline-flex;
+
 }
 
 aside {
@@ -179,18 +182,26 @@ input {
 	position: relative;
 }
 
-.error-name,
+.error-name {
+	color: #DD1972;
+	font-family: open sans;
+	font-size: 14px;
+	font-weight: 400;
+	visibility: hidden;
+
+}
+
 .player-error-message {
 	color: #DD1972;
 	font-family: open sans;
-	font-size: 16px;
-	font-weight: 300;
-	position: absolute;
+	font-size: 14px;
+	font-weight: 400;
 	visibility: hidden;
+	top: 55px;
 }
+
 .challenger-2-container-guess {
 	display:inline-block;
-	margin: 20px;
 	position: relative;
 } 
 

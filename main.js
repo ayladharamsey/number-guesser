@@ -199,7 +199,6 @@ function checkGuess1Error(){
 	return noError;
 };
 
-}
 function checkGuess2Error(){
 	var noError = true;
 	if (parseInt(challenger2Guess.value) < parseInt(minValue.innerText) || parseInt(challenger2Guess.value) > parseInt(maxValue.innerText)){
