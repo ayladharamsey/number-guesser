@@ -97,6 +97,9 @@ section {
 	margin: 10px;
 	padding: 10px;
 }
+hr{
+	max-height: 20%;
+}
 
 aside {
 	background-color: #D0D2D3;
@@ -126,11 +129,11 @@ h2 {
 h4 {
 	font-family: open sans;
     color: #404041;
-    display: block;
     font-size: 18px;
     display: block;
     font-weight: 700;
-    margin: 3px 0 5px 0;
+    margin: 3px 10px 10px 0px;
+    max-height: 20px
 }
 
 p, label {
@@ -161,7 +164,6 @@ input {
 
 .min-container, .max-container {
 	display: inline-block;
-	margin-right: 20px;
 }
 
 .challenger-1-name {
@@ -171,7 +173,6 @@ input {
 
 .challenger-1-container-name, .challenger-2-container-name {
 	display:inline-block;
-	margin: 20px;
 }
 
 .challenger-1-container-guess {
@@ -190,7 +191,6 @@ input {
 }
 .challenger-2-container-guess {
 	display:inline-block;
-	margin: 20px;
 	position: relative;
 } 
 
@@ -259,9 +259,15 @@ input {
  	text-align: center;
 }
 
-.score-challenger-1, .score-challenger-2{
-	display: inline-block;
+.score-challenger-1{
+	display: block;
+    position: absolute;
+    margin-top: 15px;
+}
+.score-challenger-2{
 	position: relative;
+    margin-top: 15px;
+}
 
 .score-challenger-2 p { 
  	text-align: center;
